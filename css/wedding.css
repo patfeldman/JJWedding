@@ -1,0 +1,368 @@
+/* */
+
+ /*98ff98-ffda03-dcdcdd-522a27-c73e1d - wedding colors*/
+
+body{
+	font-family: "Open Sans", "Josefin Slab", serif;
+	/* padding-top: 45px; */
+	background: #505050;
+}
+
+div#LeftNav {
+    /* display: inline-block; */
+}
+div.intense{
+	cursor;
+	width: 100%;
+	height: 100%;
+	border-radius: 18px;
+	border: 2px solid black;
+	background-size: cover;
+}
+div.intense.one{background: url(../img/couplepics/1_small.jpg) no-repeat left top;background-size: cover;}
+div.intense.two{ background: url(../img/couplepics/2_small.jpg) no-repeat left top;background-size: cover;}
+div.intense.three{ background: url(../img/couplepics/4_small.jpg) no-repeat left top;background-size: cover;}
+div.intense.four{ background: url(../img/couplepics/5_small.jpg) no-repeat left top;background-size: cover;}
+nav.makeStickyHeader {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 600px;
+    background: #dcdcdd;
+    padding-bottom: 3px;
+    z-index: 1000;
+}
+nav.stickyHeader {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: fixed; 
+    top: 0;
+    background: white;
+    z-index: 1000;
+}
+
+div#MidNav {
+	top: 0;
+	/* position: static; */
+	/* margin-top: -41px; */
+	background: #DCDCDD;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0px 1px 44px 6px rgba(0, 0, 0, 0.59);
+	vertical-align: top;
+	border-radius:  0 0 15px 15px;
+	padding: 10px;
+	/* position: fixed; */
+}
+
+div.navGroup {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.clearer{ clear:both;}
+.none {display:none;}
+.invisible {visibility: hidden;}
+
+.h1 {
+    /* float: left; */
+}
+
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
+	border-top: solid 1px rgba(0, 0, 0, 0.44);
+}
+
+.menuSpacer, #MidNav {
+    width: 240px;
+}
+
+a.menuLink, a.menuLinkRight {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #522A27;
+    line-height: 41px;
+    font-family: "Josefin Slab";
+    text-shadow: 0.5px 2px rgba(10, 10, 10, 0.43);
+    font-size: 16px;
+    /* font-variant: small-caps; */
+}
+
+a.menuLink:hover, a.menuLinkRight:hover {
+    text-shadow: 0px 1px;
+}
+a.menuLinkRight{
+	color: #C73E1D;
+}
+
+@media (min-width: 600px){
+	a.menuLink, a.menuLinkRight {
+		font-size: 2vw;
+	}
+}
+.title {
+    /* border-bottom: 1px solid #A2A2A2; */
+    /* background: beige; */
+}
+
+a.heading1, a.heading2 {
+    font-weight: 900;
+    font-size: 47px;
+}
+
+div#RightNav {
+    /* background: beige; */
+}
+
+h1 {
+    padding-top: 64px;
+}
+
+article {
+    padding-top: 44px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    background: #FFFFE6;
+    position: fixed;
+    z-index: -1;
+    top: 46px;
+}
+
+.topMenu {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.wedding {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+img#BrideWedding {position: absolute;right: 70%;float: right;z-index: 2;width: 450px;}
+
+img#GroomWedding {width: 450px;z-index: 1;position: absolute;right: 55%;}
+
+img#GroomHIF {
+/* float: left; */      width: 486px;      z-index: 1;      position: absolute;      left: 55%;}
+
+img#BrideHIF {
+    position: absolute;
+    left: 70%;
+    z-index: 2;
+    width: 529px;
+    top: 139px;
+}
+
+.hif {
+    float: left;
+    width: 50%;
+    height: 100%;
+    /* padding-top: 100px; */
+    background: #712E00;
+}
+
+div#PictureHeadline {
+    margin: auto;
+    text-align: center;
+    /* padding-top: 100px; */
+    width: 100%;
+    height: 600px;
+    /* max-width: 1200px; */
+}
+
+.pictureTitle {
+    /* width: 200px; */
+    position: absolute;
+    /* top: -288px; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 258px;
+}
+
+.pictureTitle .title {}
+
+
+section#MainPicture {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+section#TopNavTitle {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+
+div#MidNav a.menuLink {
+    font-family: "sofia";
+    font-weight: 900;
+    /* font-size: 63px; */
+}
+
+section.info {
+    background: white;
+    z-index: 0;
+    height: 600px;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 100px;
+    /* padding-top: 100px; */
+}
+
+span.crossThrough {
+    font-family: "sofia";
+    color: black;
+    font-weight: 900;
+    font-size: 30px;
+    text-decoration: line-through;
+    padding: 0 10px;
+}
+
+div.rightBg {
+    background: url(../img/bridal-party-right.jpg) no-repeat left top;
+    height: 100%;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: -4px 0px 18px 0px rgba(0, 0, 0, 0.59);
+}
+
+div.leftBg {
+    background: url(../img/bridal-party-left.jpg) no-repeat right top;
+    height: 100%;
+    width: 50%;
+}
+
+.page1 {
+    height: 100%;
+    /* max-width: 1299px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: nowrap; */
+}
+
+a.page1desc {
+    font-family: "sofia";
+    color: black;
+    font-weight: 900;
+    font-size: 30px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    float: left;
+    text-align: center;
+}
+
+.page1TitleGroup {
+    height: 600px;
+    margin: 0 auto;
+    width: 195px;
+    margin-top: 235px;
+}
+
+.pointer {
+    bottom: 0;
+    width: 110px;
+    height: 123px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    font-family: "Josefin Slab";
+    font-weight: 900;
+    padding-top: 23px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0px -5px 28px -1px rgba(0, 0, 0, 0.65);
+    border-radius: 59px 59px 0 0;
+}
+
+div.pointer div {
+    /* text-align: center; */
+    margin: auto;
+    display: inline-block;
+    border-right: 55px solid transparent;
+    border-top: 33px solid #FFFFFF;
+    border-left: 55px solid transparent;
+    bottom: -33px;
+    left: 0;
+    position: absolute;
+    /* box-shadow: 1px 3px 8px 3px black; */
+}
+
+div.pointer span {
+    /* padding-top: 25px; */
+}
+
+div#PictureHeadline img {
+    max-width: 570px;
+}
+
+div#PictureHeadline div.wedding,div#PictureHeadline div.hif {
+    padding-top: 100px;
+    /* background: url(../img/.jpg) no-repeat right top; */
+}
+
+div#PictureHeadline div.wedding {
+    background: url(../img/whitepagefull.jpg) repeat-y right top;
+}
+
+div#PictureHeadline div.hif {
+    background: url(../img/hixs_pattern_evolution.png) right top;*/;
+    /* background: url(../img/wild_oliva.png) right top; */
+}
+
+section#EntirePage {
+    width: 100%;
+    background: url(../img/wild_oliva.png) right top;
+    padding-top: 100px;
+}
+
+section#Story div.page2 {
+    background: url(../img/whitepagefull.jpg) left top;
+    height: 600px;
+    align-items: center;
+    padding-top: 60px;
+    text-align: center;
+    /* padding-bottom: 60px; */
+}
+
+.flexBoxPics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;
+    padding-bottom: 60px;
+}
+
+.flexBoxPic {
+    flex-shrink: 1;
+    width: 22vw;
+    height: 22vw;
+    max-width: 200px;
+    /* min-width: 103px; */
+    max-height: 200px;
+    /* min-height: 200px; */
+}
