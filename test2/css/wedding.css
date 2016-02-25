@@ -74,8 +74,8 @@ body {
   
   
 .content-box{
-	position:absolute; 
-	top:50%; 
+	position:absolute;
+	top:50%;
 	left:50%;
 	width:900px;
 	margin-left:-450px;
@@ -277,18 +277,18 @@ ul#navigation li:hover {
 }
 
 .home .content-box{
-	height:340px; 
+	height:340px;
 	margin-top:-187px;
 }
 
-.home-img {  
-	display:block;
-	margin: auto;
-	position: relative;
-	text-indent: -9999px;
-	width: 540px;
-	height: 335px;
-	background: url(images/kl-title.png) no-repeat;
+.home-img {
+	/* display:block; */
+	/* margin: auto; */
+	/* position: relative; */
+	/* text-indent: -9999px; */
+	/* width: 540px; */
+	/* height: 335px; */
+	/* background: url(images/kl-title.png) no-repeat; */
 }
 
 
@@ -1073,4 +1073,54 @@ ul#navigation li:hover {
 .target span{
 	background: url(images/target.jpg) no-repeat;
 	background-position: -282px 0;
+}
+
+.home-date {
+    /* display: block; */
+    /* margin: auto; */
+    /* position: relative; */
+    /* width: 540px; */
+}
+
+.home-date h2 {
+    width: 100px;
+}
+
+.home-img span {
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+.home-date span {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.day-year-group {width: 100%;}
+
+.day {
+    float: left;
+    line-height: 60px;
+}
+
+.day-year {
+    float: left;
+}
+
+.day-word {
+    line-height: 30px;
+}
+
+.year {
+    line-height: 30px;
+}
+
+.month {
+    text-align: center;
+}
+
+.home-date div {
+    border: solid 1px red;
 }
