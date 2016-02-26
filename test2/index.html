@@ -22,6 +22,8 @@ Jenny + Dustin | We're Getting Married!
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" /> 
 <link rel="image_src" href="images/fb-icon.jpg" />
@@ -144,8 +146,8 @@ $(document).ready(function() {
 <div id="header">
 <ul id="navigation">
 	<li class="home-nav" onClick="scrollNav('.home')">JJ + D</li>
+	<li class="story-nav" onClick="scrollNav('.story')">The Story</li>
 	<li class="pictures-nav" onClick="scrollNav('.pictures')">Pictures</li>
-	<li class="story-nav" onClick="scrollNav('.story')">Our Story</li>
 	<li class="info-nav" onClick="scrollNav('.info')">Event Info</li>
 	<li class="party-nav" onClick="scrollNav('.party')">Wedding Party</li>
 	<li class="rsvp-nav" onClick="scrollNav('.rsvp')">RSVP</li>
@@ -154,64 +156,90 @@ $(document).ready(function() {
 </div>
 <!-- Home Frame -->
 	<div class="home slide">
+		<div class="coupleImage">
+			<img src="img/couple.png" class="img">
+		</div>
+		<div class="cakeImage">
+			<img src="img/cakeboat.png" class="img">
+		</div>
 		<div class="content-box">
 			<div class="home-img">
-				<span>Jenny + Dustin</span>
+				<div class="h1">Jenny + Dustin</div>
+				<div class="h2">Hope It Floats X - Wedding Edition</div>
 			</div>
 			<div class="home-date">
-				<div class="month"> JUNE </div>
+				<div class="month">JUNE</div>
 				<div class="day-year-group">
-					<div class="day">
-						25
-					</div>
+					<div class="day">25</div>
 					<div class="day-year">
-						<div class="day-word">Saturday</div>
+						<div class="day-word">saturday</div>
 						<div class="year">2016</div>
 					</div>
+					<div class="clearer"></div>
 				</div>
 				<div class="clearer"></div>
 			</div>
-			<div class="home-date">
-				<span>RSVP!</span>
+			<div class="home-date2">
+				<a class="rsvpText">RSVP Now!</a>
 			</div>
 		</div>
 	</div>
-<!-- Pictures Frame -->
-	<div class="pictures slide">
-		<div class="content-box">
-			
-			<div class="pictures-title"><h1>Pictures</h1></div>
-			
-			<h2 class="gallery-title">Click on the boxes</h2>
-			
-			<div class="gallery">
-				<a class="photo one" rel="story-gallery" href="images/gallery/ss-01.jpg" title="">Photo<span></span></a>
-				<a class="photo two" rel="story-gallery" href="images/gallery/ss-02.jpg" title="">Photo<span></span></a>
-				<a class="photo three" rel="story-gallery" href="images/gallery/ss-03.jpg" title="">Photo<span></span></a>
-				<a class="photo four" rel="story-gallery" href="images/gallery/ss-04.jpg" title="">Photo<span></span></a>
-				<a class="photo five" rel="story-gallery" href="images/gallery/ss-05.jpg" title="">Photo<span></span></a>
-				<a class="photo six" rel="story-gallery" href="images/gallery/ss-06.jpg" title="">Photo<span></span></a>
-				<a class="photo seven" rel="story-gallery" href="images/gallery/ss-07.jpg" title="">Photo<span></span></a>
-				<a class="photo eight" rel="story-gallery" href="images/gallery/ss-08.jpg" title="">Photo<span></span></a>
-				<a class="photo nine" rel="story-gallery" href="images/gallery/ss-09.jpg" title="">Photo<span></span></a>
-				<a class="photo ten" rel="story-gallery" href="images/gallery/ss-10.jpg" title="">Photo<span></span></a>
-				<a class="photo eleven" rel="story-gallery" href="images/gallery/ss-11.jpg" title="">Photo<span></span></a>
-				<a class="photo twelve" rel="story-gallery" href="images/gallery/ss-12.jpg" title="">Photo<span></span></a>
-				<a class="photo thirteen" rel="story-gallery" href="images/gallery/ss-13.jpg" title="">Photo<span></span></a>
-				<a class="photo fourteen" rel="story-gallery" href="images/gallery/ss-14.jpg" title="">Photo<span></span></a>
-				<a class="photo fifteen" rel="story-gallery" href="images/gallery/ss-15.jpg" title="">Photo<span></span></a>
-				<a class="photo sixteen" rel="story-gallery" href="images/gallery/ss-16.jpg" title="">Photo<span></span></a>
-				<a class="photo seventeen" rel="story-gallery" href="images/gallery/ss-17.jpg" title="">Photo<span></span></a>
-				<a class="photo eighteen" rel="story-gallery" href="images/gallery/ss-18.jpg" title="">Photo<span></span></a>
-			</div>
-		
-		</div>
-	</div>
-
 <!-- Our Story Frame -->
 
 	<div class="story slide">
-		<div class="content-box">
+		<div class="navigator1">
+			<div class="test"></div>
+			<img src="img/next-right-dk.png" alt="Next">
+		</div>
+		<div class="navigator2">
+			<img src="img/next-left-dk.png" alt="Next">
+			<div id="next">
+				<img src="img/next-left.png" alt="Next">
+			</div>
+		</div>
+		<div class="content-box box1">
+			
+			<div class="story-title sectionHeader">
+				<div class="h1">Our Story</div>
+				<div class="h2">Rollover the Timeline</div>
+			</div>
+			
+			<div class="timeline">
+
+				
+				<div class="highlights">
+					<a class="heart first">Highlight 1<span></span></a>
+					<h4><span>September, 2008</span><br />Jenny + Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h4>
+				</div>
+				<div class="highlights">
+					<a class="heart second">Highlight 2<span></span></a>
+					<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Dustin nervously asked Jenny to be his girlfriend.  The first kiss followed shortly after…</h4>
+				</div>
+				<div class="highlights">
+					<a class="heart third">Highlight 3<span></span></a>
+					<h4><span>June, 2010</span><br />Jenny + Dustin made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
+				</div>
+				<div class="highlights">
+					<a class="heart fourth">Highlight 4<span></span></a>
+					<h4><span>July, 2010</span><br />Jenny moved to Spokane, Washington for grad school (i.e.) Jenny + Dustin embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Jenny’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
+				</div>
+				<div class="highlights">
+					<a class="heart fifth">Highlight 5<span></span></a>
+					<h4><span>June-Aug 2011</span><br />Jenny + Dustin had the pleasure and privilege of taking TWO family vacations with the Feldman and Lehmann clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
+				</div>
+				<div class="highlights">
+					<a class="heart sixth">Highlight 6<span></span></a>
+					<h4><span>January 22nd, 2012</span><br />Dustin flew to London to surprise Jenny and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
+				</div>
+				<div class="highlights">
+					<a class="heart seventh">Highlight 7<span></span></a>
+					<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
+				</div>
+	
+			</div>
+			
+		</div>
+<!-- 		<div class="content-box2">
 			
 			<div class="story-title"><h1>Our Story</h1></div>
 			
@@ -250,9 +278,43 @@ $(document).ready(function() {
 				</div>
 	
 			</div>
-			
+ -->			
 		</div>
 	</div>
+
+
+<!-- Pictures Frame -->
+	<div class="pictures slide">
+		<div class="content-box">
+			
+			<div class="pictures-title"><h1>Pictures</h1></div>
+			
+			<h2 class="gallery-title">Click on the boxes</h2>
+			
+			<div class="gallery">
+				<a class="photo one" rel="story-gallery" href="images/gallery/ss-01.jpg" title="">Photo<span></span></a>
+				<a class="photo two" rel="story-gallery" href="images/gallery/ss-02.jpg" title="">Photo<span></span></a>
+				<a class="photo three" rel="story-gallery" href="images/gallery/ss-03.jpg" title="">Photo<span></span></a>
+				<a class="photo four" rel="story-gallery" href="images/gallery/ss-04.jpg" title="">Photo<span></span></a>
+				<a class="photo five" rel="story-gallery" href="images/gallery/ss-05.jpg" title="">Photo<span></span></a>
+				<a class="photo six" rel="story-gallery" href="images/gallery/ss-06.jpg" title="">Photo<span></span></a>
+				<a class="photo seven" rel="story-gallery" href="images/gallery/ss-07.jpg" title="">Photo<span></span></a>
+				<a class="photo eight" rel="story-gallery" href="images/gallery/ss-08.jpg" title="">Photo<span></span></a>
+				<a class="photo nine" rel="story-gallery" href="images/gallery/ss-09.jpg" title="">Photo<span></span></a>
+				<a class="photo ten" rel="story-gallery" href="images/gallery/ss-10.jpg" title="">Photo<span></span></a>
+				<a class="photo eleven" rel="story-gallery" href="images/gallery/ss-11.jpg" title="">Photo<span></span></a>
+				<a class="photo twelve" rel="story-gallery" href="images/gallery/ss-12.jpg" title="">Photo<span></span></a>
+				<a class="photo thirteen" rel="story-gallery" href="images/gallery/ss-13.jpg" title="">Photo<span></span></a>
+				<a class="photo fourteen" rel="story-gallery" href="images/gallery/ss-14.jpg" title="">Photo<span></span></a>
+				<a class="photo fifteen" rel="story-gallery" href="images/gallery/ss-15.jpg" title="">Photo<span></span></a>
+				<a class="photo sixteen" rel="story-gallery" href="images/gallery/ss-16.jpg" title="">Photo<span></span></a>
+				<a class="photo seventeen" rel="story-gallery" href="images/gallery/ss-17.jpg" title="">Photo<span></span></a>
+				<a class="photo eighteen" rel="story-gallery" href="images/gallery/ss-18.jpg" title="">Photo<span></span></a>
+			</div>
+		
+		</div>
+	</div>
+
 
 
 <!-- Event Info Frame -->
