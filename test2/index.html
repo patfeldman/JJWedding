@@ -24,144 +24,41 @@ Jenny + Dustin | We're Getting Married!
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" /> 
 <link rel="image_src" href="images/fb-icon.jpg" />
-
-<!-- Google Analytics -->
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32915847-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 
 <!-- Java Script -->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="js/wedding.js"></script>
 
-
-<script type="text/javascript">
-
-    // Scroll Animation
-
-function scrollNav(id){
-			$('html,body').animate({scrollTop: $(""+id).offset().top},'slow');
-}
-
-
-  // Next Scroll Bar
-
-$(function() {
-
-    function scroll(direction) {
-
-        var scroll, i,
-                positions = [],
-                here = $(window).scrollTop(),
-                collection = $('.slide');
-
-        collection.each(function() {
-            positions.push(parseInt($(this).offset()['top'],10));
-        });
-
-        for(i = 0; i < positions.length; i++) {
-            if (direction == 'next' && positions[i] > here) { scroll = collection.get(i); break; }
-            if (direction == 'prev' && i > 0 && positions[i] >= here) { scroll = collection.get(i-1); break; }
-        }
-
-        if (scroll) {
-            $.scrollTo(scroll, {
-                duration: 750       
-            });
-        }
-
-        return false;
-    }
-
-    $("#next,#prev").click(function() {        
-        return scroll($(this).attr('id'));        
-    });
-
-    $(".scrolltoanchor").click(function() {
-        $.scrollTo($($(this).attr("href")), {
-            duration: 750
-        });
-        return false;
-    });
-
-});
-
-
-  // Fancy Box
-
-$(document).ready(function() {
-	$("a[rel=story-gallery]").fancybox({
-		'titlePosition' 	: 'inside',
-		'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
-			return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
-			}
-		});
-		
-		$("a[rel=guys-gallery]").fancybox({
-		'titlePosition' 	: 'inside',
-		'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
-			return '<span id="fancybox-title-over">' + (title.length ? '' + title : '') + '</span>';
-			}
-		});
-		
-		$("a[rel=girls-gallery]").fancybox({
-		'titlePosition' 	: 'inside',
-		'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
-			return '<span id="fancybox-title-over">' + (title.length ? '' + title : '') + '</span>';
-			}
-		});
-	
-		$("#getmore-info").fancybox({
-				'titlePosition'		: 'inside',
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none'
-		});
-});
-
-
-</script>
 </head>
 
 <body>
 
 <!-- Side Navigation -->
 
-<div id="header">
-<ul id="navigation">
-	<li class="home-nav" onClick="scrollNav('.home')">JJ + D</li>
-	<li class="story-nav" onClick="scrollNav('.story')">The Story</li>
-	<li class="pictures-nav" onClick="scrollNav('.pictures')">Pictures</li>
-	<li class="info-nav" onClick="scrollNav('.info')">Event Info</li>
-	<li class="party-nav" onClick="scrollNav('.party')">Wedding Party</li>
-	<li class="rsvp-nav" onClick="scrollNav('.rsvp')">RSVP</li>
-	<li class="gifts-nav" onClick="scrollNav('.gifts')">Gifts</li>
+<div id="Header">
+<ul id="Navigation">
+	<li class="home-nav" >JJ + D</li>
+	<li class="story-nav" >Story</li>
+	<li class="party-nav" >Party</li>
+	<li class="info-nav" >Event Info</li>
+	<li class="lodging-nav" >Lodging</li>
+	<li class="food-nav" >Food</li>
+	<li class="gifts-nav" >Registry</li>
 </ul>
 </div>
 <!-- Home Frame -->
 	<div class="home slide">
 		<div class="coupleImage">
-			<img src="img/couple.png" class="img">
+			<img src="img/coupleboat.png" class="img">
 		</div>
-		<div class="cakeImage">
-			<img src="img/cakeboat.png" class="img">
-		</div>
+		<div class="waterImage"></div>
 		<div class="content-box">
 			<div class="home-img">
 				<div class="h1">Jenny + Dustin</div>
@@ -187,226 +84,183 @@ $(document).ready(function() {
 <!-- Our Story Frame -->
 
 	<div class="story slide">
-		<div class="navigator1">
-			<div class="test"></div>
-			<img src="img/next-right-dk.png" alt="Next">
-		</div>
-		<div class="navigator2">
-			<img src="img/next-left-dk.png" alt="Next">
-			<div id="next">
-				<img src="img/next-left.png" alt="Next">
-			</div>
-		</div>
-		<div class="content-box box1">
-			
+		<div class="content-box boxLeft weddingContent">
 			<div class="story-title sectionHeader">
 				<div class="h1">Our Story</div>
 				<div class="h2">Rollover the Timeline</div>
-			</div>
-			
-			<div class="timeline">
-
-				
-				<div class="highlights">
-					<a class="heart first">Highlight 1<span></span></a>
+			</div>	
+			<div class="timeline2 hearts">
+				<div class="arrowRow">
+					<div class="leftArrow"></div>
+					<div class="midArrow"></div>
+					<div class="rightArrow"></div>
+				</div>
+				<div class="newHighlights">
+					<div class="highlight hl1 selected" data-heart-num="1"></div>
+					<div class="highlight hl2" data-heart-num="2"></div>
+					<div class="highlight hl3" data-heart-num="3"></div>
+					<div class="highlight hl4" data-heart-num="4"></div>
+					<div class="highlight hl5" data-heart-num="5"></div>
+					<div class="highlight hl6" data-heart-num="6"></div>
+					<div class="highlight hl7" data-heart-num="7"></div>
+				</div>
+			</div>	
+			<div class="storyInfo">
+				<div class="highlights story1 selected">
+					<img src="img/couple.png">
 					<h4><span>September, 2008</span><br />Jenny + Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart second">Highlight 2<span></span></a>
+				<div class="highlights story2">
+					<img src="img/cakeboat.png">
 					<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Dustin nervously asked Jenny to be his girlfriend.  The first kiss followed shortly after…</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart third">Highlight 3<span></span></a>
+				<div class="highlights story3">
+					<img src="img/couple.png">
 					<h4><span>June, 2010</span><br />Jenny + Dustin made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart fourth">Highlight 4<span></span></a>
+				<div class="highlights story4">
+					<img src="img/cakeboat.png">
 					<h4><span>July, 2010</span><br />Jenny moved to Spokane, Washington for grad school (i.e.) Jenny + Dustin embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Jenny’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
 				</div>
-				<div class="highlights">
-					<a class="heart fifth">Highlight 5<span></span></a>
+				<div class="highlights story5">
+					<img src="img/couple.png">
 					<h4><span>June-Aug 2011</span><br />Jenny + Dustin had the pleasure and privilege of taking TWO family vacations with the Feldman and Lehmann clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart sixth">Highlight 6<span></span></a>
+				<div class="highlights story6">
+					<img src="img/cakeboat.png">
 					<h4><span>January 22nd, 2012</span><br />Dustin flew to London to surprise Jenny and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart seventh">Highlight 7<span></span></a>
+				<div class="highlights story7">
+					<img src="img/couple.png">
 					<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
 				</div>
 	
 			</div>
 			
 		</div>
-<!-- 		<div class="content-box2">
-			
-			<div class="story-title"><h1>Our Story</h1></div>
-			
-			<h2>Rollover the timeline</h2>
-			
-			<div class="timeline">
-
-				
-				<div class="highlights">
-					<a class="heart first">Highlight 1<span></span></a>
+		<div class="content-box boxRight hifContent">
+			<div class="story-title sectionHeader">
+				<div class="h1">HiFstory</div>
+				<div class="h2">Rollover the Timeline</div>
+			</div>	
+			<div class="timeline2 boats">
+				<div class="arrowRow">
+					<div class="leftArrow"></div>
+					<div class="midArrow"></div>
+					<div class="rightArrow"></div>
+				</div>
+				<div class="newHighlights">
+					<div class="highlight hl1 selected" data-heart-num="1"></div>
+					<div class="highlight hl2" data-heart-num="2"></div>
+					<div class="highlight hl3" data-heart-num="3"></div>
+					<div class="highlight hl4" data-heart-num="4"></div>
+					<div class="highlight hl5" data-heart-num="5"></div>
+					<div class="highlight hl6" data-heart-num="6"></div>
+					<div class="highlight hl7" data-heart-num="7"></div>
+				</div>
+			</div>	
+			<div class="storyInfo">
+				<div class="highlights story1 selected">
+					<img src="img/couple.png">
 					<h4><span>September, 2008</span><br />Jenny + Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart second">Highlight 2<span></span></a>
+				<div class="highlights story2">
+					<img src="img/couple.png">
 					<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Dustin nervously asked Jenny to be his girlfriend.  The first kiss followed shortly after…</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart third">Highlight 3<span></span></a>
+				<div class="highlights story3">
+					<img src="img/couple.png">
 					<h4><span>June, 2010</span><br />Jenny + Dustin made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart fourth">Highlight 4<span></span></a>
+				<div class="highlights story4">
+					<img src="img/couple.png">
 					<h4><span>July, 2010</span><br />Jenny moved to Spokane, Washington for grad school (i.e.) Jenny + Dustin embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Jenny’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
 				</div>
-				<div class="highlights">
-					<a class="heart fifth">Highlight 5<span></span></a>
+				<div class="highlights story5">
+					<img src="img/couple.png">
 					<h4><span>June-Aug 2011</span><br />Jenny + Dustin had the pleasure and privilege of taking TWO family vacations with the Feldman and Lehmann clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart sixth">Highlight 6<span></span></a>
+				<div class="highlights story6">
+					<img src="img/couple.png">
 					<h4><span>January 22nd, 2012</span><br />Dustin flew to London to surprise Jenny and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
 				</div>
-				<div class="highlights">
-					<a class="heart seventh">Highlight 7<span></span></a>
+				<div class="highlights story7">
+					<img src="img/couple.png">
 					<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
 				</div>
 	
 			</div>
- -->			
 		</div>
+
+		<div class="navigatorRight navBarRight"></div>
+		<div class="navigatorLeft none navBarLeft"></div>
+
 	</div>
 
-
-<!-- Pictures Frame -->
-	<div class="pictures slide">
-		<div class="content-box">
-			
-			<div class="pictures-title"><h1>Pictures</h1></div>
-			
-			<h2 class="gallery-title">Click on the boxes</h2>
-			
-			<div class="gallery">
-				<a class="photo one" rel="story-gallery" href="images/gallery/ss-01.jpg" title="">Photo<span></span></a>
-				<a class="photo two" rel="story-gallery" href="images/gallery/ss-02.jpg" title="">Photo<span></span></a>
-				<a class="photo three" rel="story-gallery" href="images/gallery/ss-03.jpg" title="">Photo<span></span></a>
-				<a class="photo four" rel="story-gallery" href="images/gallery/ss-04.jpg" title="">Photo<span></span></a>
-				<a class="photo five" rel="story-gallery" href="images/gallery/ss-05.jpg" title="">Photo<span></span></a>
-				<a class="photo six" rel="story-gallery" href="images/gallery/ss-06.jpg" title="">Photo<span></span></a>
-				<a class="photo seven" rel="story-gallery" href="images/gallery/ss-07.jpg" title="">Photo<span></span></a>
-				<a class="photo eight" rel="story-gallery" href="images/gallery/ss-08.jpg" title="">Photo<span></span></a>
-				<a class="photo nine" rel="story-gallery" href="images/gallery/ss-09.jpg" title="">Photo<span></span></a>
-				<a class="photo ten" rel="story-gallery" href="images/gallery/ss-10.jpg" title="">Photo<span></span></a>
-				<a class="photo eleven" rel="story-gallery" href="images/gallery/ss-11.jpg" title="">Photo<span></span></a>
-				<a class="photo twelve" rel="story-gallery" href="images/gallery/ss-12.jpg" title="">Photo<span></span></a>
-				<a class="photo thirteen" rel="story-gallery" href="images/gallery/ss-13.jpg" title="">Photo<span></span></a>
-				<a class="photo fourteen" rel="story-gallery" href="images/gallery/ss-14.jpg" title="">Photo<span></span></a>
-				<a class="photo fifteen" rel="story-gallery" href="images/gallery/ss-15.jpg" title="">Photo<span></span></a>
-				<a class="photo sixteen" rel="story-gallery" href="images/gallery/ss-16.jpg" title="">Photo<span></span></a>
-				<a class="photo seventeen" rel="story-gallery" href="images/gallery/ss-17.jpg" title="">Photo<span></span></a>
-				<a class="photo eighteen" rel="story-gallery" href="images/gallery/ss-18.jpg" title="">Photo<span></span></a>
+	
+<!-- Wedding Party Frame -->
+	
+	<div class="party slide">
+		<div class="content-box boxLeft weddingContent">
+			<div class="sectionHeader">
+				<div class="h1">The Wedding Party</div>
+				<div class="h2">The people standing beside us!</div>
 			</div>
-		
+			<div class="groomsmenImage">
+				<img src="img/groomsmen.png" class="partyImg">
+			</div>
+			<div class="bridesmaidImage">
+				<img src="img/bridesmaid.png" class="partyImg">			
+			</div>
 		</div>
 	</div>
+	
+
 
 
 
 <!-- Event Info Frame -->
 
 	<div class="info slide">
-		<div class="content-box">
-		
-			<div class="info-title"><h1>Event Info</h1></div>
-			
-			<div class="map-content">
-				<img class="map" src="images/map.png" alt="Map" />
-			</div>
-			
+		<div class="content-box boxLeftHalf weddingContent">
 			<div class="info-content">
-				<h2>Lord Hill Farms</h2>
-				<h3>Ceremony at 5:30</h3>
+				<h3>Ceremony at 5:30pm</h3>
 				<h3>Dinner and dancing to follow</h3>
-				
-				<div class="more-info">
-				<a class="info btn" id="getmore-info" href="#inline1" title="">More Event Info<span></span></a> 
-				</div>
-				
-				<div style="display: none;">
-					<div id="inline1" style="width:600px;height:550px;overflow:auto;">
-					<p>The ceremony will begin at 5:30pm and will take place outside, weather permitting.  Dinner and dancing will follow shortly after.  Bring your party pants/dresses people, it’s going to be a good ole’ time. Dress is semiformal; bow ties and/or bolo ties are encouraged.</p>
-<div class="line-seperator"></div>
-<p>Lord Hill Farms is located in Snohomish, about 45 minutes north of Seattle.  Please allow between 45 and 60 minutes travel time to reach Lord Hill Farms if leaving from Seattle (it’s awkward being late to a wedding, isn’t it?). Ample parking will be available on site.</p>
-<p>Beer and Wine will be served at the reception by a licensed bartender. If you are over the age of 21 and wish to partake, please make sure to bring your ID with you.</p>
-<div class="line-seperator"></div>
-<p>If you are joining us from out of town, you may wish to book a hotel reservation.  Some hotels we can recommend that are located closer to the venue include:</p>
-<p>•	<a href="http://www.guesthouseintl.com" target="_blank">Guesthouse Inn &amp; Suites Monroe</a> ($)<br />
-•	<a href="http://hiltongardeninn3.hilton.com" target="_blank">Hilton Garden Inn Seattle/Bothell</a> ($$)<br />
-•	<a href="http://www.willowslodge.com/index.html" target="_blank">Willows Lodge Woodinville</a> ($$$)</p>
-<p>Many other lodging accommodations are available closer to downtown Seattle; we recommend you look for lodging there if you’re planning on exploring the city a bunch over the weekend.</p>
-<div class="line-seperator"></div>
-<p>Any questions, comments, concerns, playlist requests, or accommodation inquiries, feel free to contact Jenny or Dustin: <a href="mailto:JennyplusDustin@gmail.com">JennyplusDustin@gmail.com</a></p>
+			</div>
+		</div>
+		<div class="content-box boxRightHalf hifContent">
+			<div class="info-content">
+				<h3>Pre-Competitions begin at 10:00am</h3>
+				<h3>Building and Racing to follow</h3>
+			</div>
+		</div>
 
-					</div>
-				</div>
-				
-				<div class="get-directions">
-				<a href="http://goo.gl/maps/V1XY" target="_blank" class="directions btn">Driving Directions<span></span></a> 
-				</div>
-			</div>
-			
+		<div class="sectionHeader">
+			<div class="h1">Event Info</div>
+			<div class="h2">location: The Cove!</div>
+			<img src="img/map.png">
 		</div>
+
 	</div>
 	
-<!-- Wedding Party Frame -->
+<!-- Logding Frame -->
 	
-	<div class="party slide">
-		<div class="content-box">
-		
-			<div class="party-title"><h1>The Wedding Party</h1></div>
-			
-			<h2>The people standing beside us!</h2>
-			
-			<div class="groomsmen">
-				<h3 class="wp-title">Groomsmen</h3>
-				
-				<div class="party-gallery">
-					<a class="wp one" rel="guys-gallery" href="images/gallery/guys1.jpg" title="BEST MAN: Josiah Brown">Photo One<span></span></a>
-					<a class="wp two" rel="guys-gallery" href="images/gallery/guys2.jpg" title="Levi Lehmann">Photo One<span></span></a>
-					<a class="wp three" rel="guys-gallery" href="images/gallery/guys3.jpg" title="Trevor White">Photo One<span></span></a>
-					<a class="wp four" rel="guys-gallery" href="images/gallery/guys4.jpg" title="Aaron McConkey">Photo One<span></span></a>
-					<a class="wp five" rel="guys-gallery" href="images/gallery/guys5.jpg" title="Chris Kyle">Photo One<span></span></a>
-					<a class="wp six" rel="guys-gallery" href="images/gallery/guys6.jpg" title="Chris Hanke">Photo One<span></span></a>
-					<a class="wp seven" rel="guys-gallery" href="images/gallery/guys7.jpg" title="Jake Kirkwood">Photo One<span></span></a>
-				</div>
-			</div>
-			
-			<div class="bridesmaids">
-				<h3 class="wp-title">Bridesmaids</h3>
-				
-				<div class="party-gallery">
-					<a class="wp one" rel="girls-gallery" href="images/gallery/girls1.jpg" title="MAID OF HONOR: Ashlea Holcomb">Photo One<span></span></a>
-					<a class="wp two" rel="girls-gallery" href="images/gallery/girls2.jpg" title="MATRON OF HONOR: Mali Hawkins">Photo One<span></span></a>
-					<a class="wp three" rel="girls-gallery" href="images/gallery/girls3.jpg" title="Heidi Lehmann">Photo One<span></span></a>
-					<a class="wp four" rel="girls-gallery" href="images/gallery/girls4.jpg" title="Amy Archibald">Photo One<span></span></a>
-					<a class="wp five" rel="girls-gallery" href="images/gallery/girls5.jpg" title="Kashley Ricedorff">Photo One<span></span></a>
-					<a class="wp six" rel="girls-gallery" href="images/gallery/girls6.jpg" title="Beth Buer">Photo One<span></span></a>
-					<a class="wp seven" rel="girls-gallery" href="images/gallery/girls7.jpg" title="Kate Spencer">Photo One<span></span></a>
-				</div>
-			</div>
-			
+	<div class="lodging slide">
+		<div class="content-box boxLeftHalf weddingContent">
+		</div>
+		<div class="content-box boxRightHalf hifContent">
+		</div>
+		<div class="sectionHeader">
+			<div class="h1">Lodging</div>
+			<div class="h2">Places to stay</div>
 		</div>
 	</div>
-	
+
+
 <!-- RSVP Frame -->
 	
 	<div class="rsvp slide">
-		<div class="content-box">
+		<div class="content-box boxLeft weddingContent">
 		
 			<div class="rsvp-title"><h1>RSVP: Come Join the Party!</h1></div>
 			
