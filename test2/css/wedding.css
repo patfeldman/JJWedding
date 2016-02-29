@@ -265,11 +265,7 @@ ul#Navigation li:hover {
 	opacity: 1;
 	filter:alpha(opacity=100);
 }
-.highlights h4 {
-	margin-left: 30%;
-	width: 65%;
-	margin-top: 10px;
-}
+.highlights h4 {margin: 0;}
 .highlights:hover h4{
 	display:block;
 	opacity: 1;
@@ -442,7 +438,7 @@ ul#Navigation li:hover {
 }
 .info-content{
 	/* float:left; */
-	width: 100%;
+	/* width: 100%; */
 	/* height:311px; */
 	/* padding-left:29px; */
 	text-align: left;
@@ -555,57 +551,39 @@ ul#Navigation li:hover {
 	text-shadow: rgb(0,138,160) 0 0 0;
 }
 .groomsmen{
-	display:block;
-	position:relative;
-	width:602px;
-	height:60px;
-	padding-top:60px;
-	margin-left:auto;
-	margin-right:auto;
-	left:0;
-	right:0;
+	height: 100px;
+	margin: auto;
 }
 .bridesmaids{
-	display:block;
-	position:relative;
-	width:607px;
-	height:60px;
-	padding-top:15px;
-	margin-left:auto;
-	margin-right:auto;
-	left:0;
-	right:0;
+	width: 80vw;
+	height: 100px;
+	margin: auto;
 }
 
 .wp-title{
 	font-size:50px;
-	margin-top:15px;
-	margin-right:20px;
 	float:left;
+	font-family: pacifico;
+	text-shadow: 1px 1px 1px #000;
+	margin: 0;
+	width: 16vw;
 }
 
-.party-gallery {
-	position:relative;
-	display:block;
-	overflow:auto;
-	width:427px;
-	height:60px;
-}
-.wp {  
+.party-gallery {height: 60px;width: 748px;}
+.wp {
 	display:block;
 	position: relative;
 	text-indent: -9999px;
 	width: 51px;
 	height: 51px;
-	background: url(images/partythumb-sprite.jpg) no-repeat;
-    float:left;
-    margin-right:10px;   
+	float:left;
+	margin-right:10px;
+	background-color: red;
 }
 
 .wp span {
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-	background: url(images/partythumb-sprite.jpg) no-repeat;
 	background-position: -51px 0;
 	opacity: 0;
 	filter:alpha(opacity=0);
@@ -620,48 +598,48 @@ ul#Navigation li:hover {
 }
 
 .groomsmen .one span {
-	background: url(images/partythumb-sprite.jpg) -51px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .two span {
-	background: url(images/partythumb-sprite.jpg) -102px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .three span {
-	background: url(images/partythumb-sprite.jpg) -153px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .four span {
-	background: url(images/partythumb-sprite.jpg) -204px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .five span {
-	background: url(images/partythumb-sprite.jpg) -255px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .six span {
-	background: url(images/partythumb-sprite.jpg) -306px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .seven span {
-	background: url(images/partythumb-sprite.jpg) -357px 0;
+	background: url(../img/groomsman1.png) no-repeat;
 }
 
 
 .bridesmaids .one span {
-	background: url(images/partythumb-sprite.jpg) -408px 0;
+	background: url(../img/bridesmaid1.png) no-repeat;
 }
 .bridesmaids .two span {
-	background: url(images/partythumb-sprite.jpg) -459px 0;
+	background: url(../img/bridesmaid2.png) no-repeat;
 }
 .bridesmaids .three span {
-	background: url(images/partythumb-sprite.jpg) -510px 0;
+	background: url(../img/bridesmaid3.png) no-repeat;
 }
 .bridesmaids .four span {
-	background: url(images/partythumb-sprite.jpg) -561px 0;
+	background: url(../img/bridesmaid4.png) no-repeat;
 }
 .bridesmaids .five span {
-	background: url(images/partythumb-sprite.jpg) -612px 0;
+	background: url(../img/bridesmaid5.png) no-repeat;
 }
 .bridesmaids .six span {
-	background: url(images/partythumb-sprite.jpg) -663px 0;
+	background: url(../img/bridesmaid6.png) no-repeat;
 }
 .bridesmaids .seven span {
-	background: url(images/partythumb-sprite.jpg) -714px 0;
+	background: url(../img/bridesmaid1.png) no-repeat;
 }
 
 
@@ -1125,13 +1103,13 @@ img.img {
 .none{display:none;}
 
 .content-box.boxRight {
-    left: 200vw;
+    left: 100%;
     background-color: #DCD4C4;
 }
 
 .moveLeft {
-    transform: translate(-200%);
-    -webkit-transform: translate(-200%);
+    transform: translate(-100%);
+    -webkit-transform: translate(-100%);
     -webkit-transition-duration: 600ms;
     transition-duration: 600ms;
 }
@@ -1149,6 +1127,7 @@ img.img {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #ABDDC6;
+    cursor: pointer;
 }
 
 .navBarRight {
@@ -1157,6 +1136,7 @@ img.img {
     background-repeat: no-repeat;
     background-color: #fc7c7c;
     background-size: 37px;
+    cursor: pointer;
 }
 .navBarLeft:hover {
     background-color: rgba(171, 221, 198, 0.48);
@@ -1203,33 +1183,6 @@ img.partyImg {
 }
 
 
-
-@media only screen and (max-width: 900px)  {
-	.home-img .h1 {
-	    font-size: 43px;
-	    line-height: 58px;
-	}
-
-	.home-img .h2 {
-	    font-size: 27px;
-	    line-height: 36px;
-	}
-
-	.coupleImage {
-	    right: 0;
-	    left:initial
-	}
-	.content-box{
-		top:10vh;
-	}
-
-
-	.party .sectionHeader .h1 {
-	    font-size: 30px;
-	    line-height: 44px;
-	}
-
-}
 
 
 .timeline2 {
@@ -1295,14 +1248,15 @@ img.partyImg {
 }
 
 .highlight {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     position: absolute;
-    top: 34px;
-    background: url(../img/heart.png) no-repeat;
+    top: 30px;
+    background: url(../img/heart_new.png);
     float: left;
     cursor: pointer;
-    background-size: 79px;
+    background-size: 41px;
+    background-repeat: no-repeat;
 }
 
 .hl1 {margin-left: 3%;}
@@ -1316,7 +1270,7 @@ img.partyImg {
 
 
 .hearts .newHighlights .selected {
-    background-position-x: -40px;
+    background-image: url(../img/heart_new_sel.png);
 }
 
 .storyInfo {
@@ -1344,7 +1298,7 @@ img.partyImg {
 }
 
 .hifContent .highlight {
-    background: url(../img/boat-o.png) no-repeat;
+    background: url(../img/boat-g.png) no-repeat;
     background-size: 38px;
 }
 
@@ -1354,7 +1308,6 @@ img.partyImg {
 }
 
 .hearts .highlight:hover {
-    background-position-x: -40px;
 }
 
 .highlights:not(.selected) {
@@ -1362,12 +1315,7 @@ img.partyImg {
 }
 
 .highlights img {
-    float: left;
-    width: 20%;
-    /* height: 100%; */
-    border: solid 18px white;
-    border-bottom: solid 36px white;
-    box-shadow: 3px 3px 3px 2px #737272;
+    width: 100%;
 }
 
 .highlights {
@@ -1393,7 +1341,7 @@ img.partyImg {
 }
 
 .boats .highlight.selected {
-    background-image: url(../img/boat-g.png);
+    background-image: url(../img/boat-o.png);
 }
 
 .content-box.boxLeftHalf {
@@ -1433,4 +1381,75 @@ div.info div.sectionHeader div.h1 {
     margin: auto;
     text-align: center;
     height: 30vh;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}
+
+.imgBg {
+    width: 24%;
+    border: 2vw white solid;
+    border-bottom: 4vw white solid;
+    float: left;
+    margin: 10px 10px 0px 0px;
+}
+
+.imgTxt {
+    width: 65%;
+    height: 300px;
+    float: left;
+}
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+@media only screen and (max-width: 900px)  {
+	.home-img .h1 {
+	    font-size: 43px;
+	    line-height: 58px;
+	}
+
+	.home-img .h2 {
+	    font-size: 27px;
+	    line-height: 36px;
+	}
+
+	.coupleImage {
+	    right: 0;
+	    left:initial
+	}
+	.content-box{
+		top:10vh;
+	}
+
+
+	.party .sectionHeader .h1 {
+	    font-size: 30px;
+	    line-height: 44px;
+	}
+
+	.timeline2{
+	    width: 80vw;
+	}
+
+}
+
+
+
+.weddingPartyGroup {
+    /* margin: auto; */
+    /* text-align: center; */
+    position: relative;
 }

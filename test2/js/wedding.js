@@ -31,8 +31,8 @@ Wedding.Initialize = function(){
 
 		$leftContent.addClass("moveLeft");
 		$rightContent.addClass("moveLeft");
-		$target.addClass("none");
-		$navBarLeft.removeClass("none");
+		$target.removeClass("visible").addClass("hidden");
+		$navBarLeft.removeClass("hidden").addClass("visible");
 	});
 
 	$( ".navBarLeft" ).click(function(e) {
@@ -46,8 +46,8 @@ Wedding.Initialize = function(){
 
 		$leftContent.addClass("moveRight");
 		$rightContent.addClass("moveRight");
-		$target.addClass("none");
-		$navBarRight.removeClass("none");
+		$target.removeClass("visible").addClass("hidden");
+		$navBarRight.removeClass("hidden").addClass("visible");
 	});
 
 	$(".hearts .highlight, .boats .highlight").on("hover click", function(e){
