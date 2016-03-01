@@ -32,8 +32,6 @@ h3 {
 }
 h4 {
 	font-family: 'Open Sans', arial;
-	font-size: 17px;
-	font-weight:normal;
 	color:rgb(225,86,97);
 }
 p { 
@@ -82,7 +80,6 @@ body {
 	height:100%;
 	margin: 0;
 	padding: 0;
-	
 }
 
 .slide {
@@ -137,46 +134,6 @@ ul#Navigation li:hover {
 
 
 
-#next{
-	z-index:100;
-	position:fixed;
-	bottom:0px;
-	width:100%;
-	height:70px;
-	margin:0;
-	background: url(images/footer-slice.png) repeat-x;
-	cursor: pointer;
-	opacity: 0;
-	filter:alpha(opacity=0);
-	-webkit-transition: opacity 0.5s;
-	-moz-transition:    opacity 0.5s;
-	-o-transition:      opacity 0.5s;
-	-ms-transition:     opacity 0.5s;
-}
-#next:hover {
-	opacity: 1;
-	filter:alpha(opacity=100);
-}
-#next img{
-	display:block;
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:10px;
-	left:0;
-	right:0;
-	opacity: 1;
-	filter:alpha(opacity=100);
-}
-#next .box{
-	position:absolute;
-	width:100%;
-	height:170px;
-	margin:0;
-	background-color:#383838;
-	opacity: 1;
-	filter:alpha(opacity=100);
-}
 
 /* HOME SLIDE */
 
@@ -199,21 +156,18 @@ ul#Navigation li:hover {
 
 .story {
 	background-color: rgb(230,230,230);
-	/* border: #E6E6E6 1px solid; */
 	overflow: hidden;
 }
 
 .story .content-box, .party .content-box{
 	height: 100%;
-	padding-top: 0vh;
+	padding-top: 0;
 	}
 
 .story-title {
 	display:block;
 	margin: auto;
 	position: relative;
-	/* width: 785px; */
-	/* height: 159px; */
 }
 
 .story h2 {
@@ -224,15 +178,9 @@ ul#Navigation li:hover {
 }
 
 .timeline {
-	/* position:relative; */
 	display:block;
-	/* overflow:auto; */
-	/* margin-top: 99px; */
 	height:290px;
 	background: url(../img/arrow.png) no-repeat;
-	/* background-position: 0px 0px; */
-	/* text-align: center; */
-	/* margin: auto; */
 }
 
 .heart {
@@ -272,163 +220,13 @@ ul#Navigation li:hover {
 	filter:alpha(opacity=100);	
 }
 .highlights h4 span{
-	font-size: 27px;
-	line-height: 37px;
+	/* font-size: 35px; */
+	/* line-height: 37px; */
 }
-
-
-
-/* PICTURES SLIDE */
-
-
-
-.pictures {
-	background-color: rgb(252,252,252);
-}
-
-.pictures .content-box{
-	/* height:290px; */
-	/* margin-top:-180px; */
-	}
-
-.pictures-title {  
-	display:block;
-	margin: auto;
-	position: relative;
-	text-indent: -9999px;
-	width: 320px;
-	height: 75px;
-	background: url(images/pictures.png) 0 0;
-	margin-bottom:25px;
-}
-.gallery-title{
-	font-size:35px;
-	margin-bottom:25px;
-	text-align: center;
-	color:rgb(169,169,169)
-}
-
-.gallery {
-	position:relative;
-	display:block;
-	overflow:auto;
-	margin-top:15px;
-	width:564px;
-	height:125px;
-	margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-}
-.photo {  
-	display:block;
-	position: relative;
-	text-indent: -9999px;
-	width: 51px;
-	height: 51px;
-	background: url(images/pthumb-sprite.jpg) no-repeat;
-    float:left;
-    margin-right:5px;
-    margin-left:5px;
-    margin-top:10px;   
-}
-
-.photo span {
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-	background: url(images/pthumb-sprite.jpg) no-repeat;
-	background-position: -51px 0;
-	opacity: 0;
-	filter:alpha(opacity=0);
-	-webkit-transition: opacity 0.5s;
-	-moz-transition:    opacity 0.5s;
-	-o-transition:      opacity 0.5s;
-	-ms-transition:     opacity 0.5s;
-}
-.photo:hover span {
-	opacity: 1;
-	filter:alpha(opacity=100);
-}
-
-.gallery .one span {
-	background: url(images/pthumb-sprite.jpg) -51px 0;
-}
-.gallery .two span {
-	background: url(images/pthumb-sprite.jpg) -102px 0;
-}
-.gallery .three span {
-	background: url(images/pthumb-sprite.jpg) -153px 0;
-}
-.gallery .four span {
-	background: url(images/pthumb-sprite.jpg) -204px 0;
-}
-.gallery .five span {
-	background: url(images/pthumb-sprite.jpg) -255px 0;
-}
-.gallery .six span {
-	background: url(images/pthumb-sprite.jpg) -306px 0;
-}
-.gallery .seven span {
-	background: url(images/pthumb-sprite.jpg) -357px 0;
-}
-.gallery .eight span {
-	background: url(images/pthumb-sprite.jpg) -408px 0;
-}
-.gallery .nine span {
-	background: url(images/pthumb-sprite.jpg) -459px 0;
-}
-.gallery .ten span {
-	background: url(images/pthumb-sprite.jpg) -510px 0;
-}
-.gallery .eleven span {
-	background: url(images/pthumb-sprite.jpg) -561px 0;
-}
-.gallery .twelve span {
-	background: url(images/pthumb-sprite.jpg) -612px 0;
-}
-.gallery .thirteen span {
-	background: url(images/pthumb-sprite.jpg) -663px 0;
-}
-.gallery .fourteen span {
-	background: url(images/pthumb-sprite.jpg) -714px 0;
-}
-.gallery .fifteen span {
-	background: url(images/pthumb-sprite.jpg) -765px 0;
-}
-.gallery .sixteen span {
-	background: url(images/pthumb-sprite.jpg) -816px 0;
-}
-.gallery .seventeen span {
-	background: url(images/pthumb-sprite.jpg) -867px 0;
-}
-.gallery .eighteen span {
-	background: url(images/pthumb-sprite.jpg) -918px 0;
-}
-
-
 
 /* EVENT INFO */
-
-
-
 .info {
 	background-color: rgb(220,79,83);
-}
-
-.info .content-box{
-	/* height:450px; */
-	/* margin-top:-260px; */
-	}
-
-.info-title {  
-	display:block;
-	margin: auto;
-	position: relative;
-	text-indent: -9999px;
-	width: 785px;
-	height: 75px;
-	background: url(images/title-sprites.png) 0 -75px;
-	margin-bottom:50px;
 }
 
 .map-content{
@@ -437,10 +235,6 @@ ul#Navigation li:hover {
 	height:311px;
 }
 .info-content{
-	/* float:left; */
-	/* width: 100%; */
-	/* height:311px; */
-	/* padding-left:29px; */
 	text-align: left;
 	margin-left: 44px;
 }
@@ -451,7 +245,6 @@ ul#Navigation li:hover {
 }
 .info-content h3{
 	margin:0;
-	/* margin-bottom:16px; */
 }
 .more-info{
 	clear:both;
@@ -531,49 +324,36 @@ ul#Navigation li:hover {
 	background-color: rgb(255, 242, 141);
 }
 
-.party .content-box{
-	/* top: 7vh; */
-	}
-
-.party-title {
-	display:block;
-	margin: auto;
-	position: relative;
-	/* text-indent: -9999px; */
-	width: 785px;
-	height: 75px;
-	background: url(images/title-sprites.png) 0 -150px;
-	margin-bottom:25px;
-}
 .party h2{
-	text-align: center;
-	color: rgb(0,138,160);
-	text-shadow: rgb(0,138,160) 0 0 0;
+	/* text-align: center; */
+	/* color: rgb(0,138,160); */
+	/* text-shadow: rgb(0,138,160) 0 0 0; */
 }
 .groomsmen{
-	height: 100px;
+	height: 90px;
 	margin: auto;
 }
 .bridesmaids{
-	width: 80vw;
-	height: 100px;
-	margin: auto;
+	/* width: 80vw; */
+	/* height: 100px; */
+	/* margin: auto; */
 }
 
 .wp-title{
-	font-size:50px;
+	font-size: 2.6rem;
 	float:left;
 	font-family: pacifico;
 	text-shadow: 1px 1px 1px #000;
 	margin: 0;
 	width: 16vw;
+	color: white;
+	line-height: 86px;
 }
 
 .party-gallery {height: 60px;width: 748px;}
 .wp {
 	display:block;
 	position: relative;
-	text-indent: -9999px;
 	width: 51px;
 	height: 51px;
 	float:left;
@@ -601,22 +381,22 @@ ul#Navigation li:hover {
 	background: url(../img/groomsman1.png) no-repeat;
 }
 .groomsmen .two span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman2.png) no-repeat;
 }
 .groomsmen .three span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman3.png) no-repeat;
 }
 .groomsmen .four span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman4.png) no-repeat;
 }
 .groomsmen .five span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman5.png) no-repeat;
 }
 .groomsmen .six span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman2.png) no-repeat;
 }
 .groomsmen .seven span {
-	background: url(../img/groomsman1.png) no-repeat;
+	background: url(../img/groomsman3.png) no-repeat;
 }
 
 
@@ -652,21 +432,6 @@ ul#Navigation li:hover {
 	background-color: rgb(0,138,160);
 }
 
-.rsvp .content-box{
-	/* height:475px; */
-	/* margin-top:-270px; */
-	}
-
-.rsvp-title {  
-	display:block;
-	margin: auto;
-	position: relative;
-	text-indent: -9999px;
-	width: 785px;
-	height: 75px;
-	background: url(images/title-sprites.png) 0 -225px;
-	margin-bottom:25px;
-}
 
 .rsvp h2{
 	text-align: center;
@@ -825,21 +590,6 @@ ul#Navigation li:hover {
 	background-color: rgb(230,230,230);
 }
 
-.gifts .content-box{
-	height:420px; 
-	margin-top:-250px;
-	}
-
-.gifts-title {  
-	display:block;
-	margin: auto;
-	position: relative;
-	text-indent: -9999px;
-	width: 785px;
-	height: 83px;
-	background: url(images/title-sprites.png) 0 -300px;
-	margin-bottom:25px;
-}
 
 .gifts h2{
 	color:rgb(128,128,128);
@@ -864,59 +614,18 @@ ul#Navigation li:hover {
     margin-left:20px;   
 }
 
-.registry span {
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-	background-color: rgb(230,230,230);
-	background: url(images/wsonoma.jpg) no-repeat;
-	background-position: -282px 0;
-	opacity: 0;
-	filter:alpha(opacity=0);
-	-webkit-transition: opacity 0.5s;
-	-moz-transition:    opacity 0.5s;
-	-o-transition:      opacity 0.5s;
-	-ms-transition:     opacity 0.5s;
-}
+
 .registry:hover span {
 	opacity: 1;
 	filter:alpha(opacity=100);
 }
 
-.wsonoma{
-	background: url(images/wsonoma.jpg) no-repeat;
-}
-.wsonoma span{
-	background: url(images/wsonoma.jpg) no-repeat;
-	background-position: -282px 0;
-}
-.pbarn{
-	background: url(images/pbarn.jpg) no-repeat;
-}
-.pbarn span{
-	background: url(images/pbarn.jpg) no-repeat;
-	background-position: -282px 0;
-}
-.bbeyond {
-	clear:both;
-	background: url(images/bbeyond.jpg) no-repeat;
-}
-.bbeyond span{
-	background: url(images/bbeyond.jpg) no-repeat;
-	background-position: -282px 0;
-}
-.target{
-	background: url(images/target.jpg) no-repeat;
-}
-.target span{
-	background: url(images/target.jpg) no-repeat;
-	background-position: -282px 0;
-}
 
 .home-date {
     /* display: block; */
     margin: auto;
     /* position: relative; */
-    width: 210px;
+    width: 250px;
     border: solid 2px white;
     background-color: #463D3D;
     border-radius: 5px;
@@ -1259,25 +968,18 @@ img.partyImg {
     background-repeat: no-repeat;
 }
 
-.hl1 {margin-left: 3%;}
-.hl2 {margin-left: 17%;}
-.hl3 {margin-left: 31%;}
-.hl4 {margin-left: 45%;}
-.hl5 {margin-left: 59%;}
-.hl6 {margin-left: 73%;}
-.hl7 {margin-left: 87%;}
-
-
-
+.hl1 {margin-left: 2%;}
+.hl2 {margin-left: 16%;}
+.hl3 {margin-left: 30%;}
+.hl4 {margin-left: 44%;}
+.hl5 {margin-left: 58%;}
+.hl6 {margin-left: 72%;}
+.hl7 {margin-left: 86%;}
 .hearts .newHighlights .selected {
     background-image: url(../img/heart_new_sel.png);
 }
 
 .storyInfo {
-    width: 65%;
-    height: 50vh;
-    /* border: #A0A0A0 double 5px; */
-    /* background: white; */
     margin: auto;
     border-radius: 20px;
     margin-top: 10px;
@@ -1291,7 +993,7 @@ img.partyImg {
 .hifContent .sectionHeader .h1 {
     color: #000000;
     font-size: 69px;
-    line-height: 84px;
+    line-height: 52px;
     text-shadow: 4px 4px 3px #FFFFFF;
     font-family: Poller one;
     /* letter-spacing: 23px; */
@@ -1395,18 +1097,9 @@ div.info div.sectionHeader div.h1 {
   transition: visibility 0s .5s, opacity .5s linear;
 }
 
-.imgBg {
-    width: 24%;
-    border: 2vw white solid;
-    border-bottom: 4vw white solid;
-    float: left;
-    margin: 10px 10px 0px 0px;
-}
+.imgBg {border: 10px solid white;border-bottom: 20px solid white;background: white;/* height: 100%; */padding: 0 !important;/* position: relative; */}
 
 .imgTxt {
-    width: 65%;
-    height: 300px;
-    float: left;
 }
 
 .imgContainer {
@@ -1431,7 +1124,7 @@ div.info div.sectionHeader div.h1 {
 	    left:initial
 	}
 	.content-box{
-		top:10vh;
+		/* top:10vh; */
 	}
 
 
@@ -1445,11 +1138,55 @@ div.info div.sectionHeader div.h1 {
 	}
 
 }
-
-
-
+@media only screen and (max-width: 600px)  {
+	.navigatorRight, .navigatorLeft {
+	    top: 100%;
+	    margin-top: -70px;
+	}
+}
 .weddingPartyGroup {
-    /* margin: auto; */
+    margin: auto;
     /* text-align: center; */
-    position: relative;
+    /* position: relative; */
+    width: 100%;
+}
+
+h5 {
+    font-size: 1.4rem;
+    line-height: 117%;
+    color: #E2848B;
+}
+
+nav {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.44);
+}
+
+.sectionBody.valign-wrapper {
+    height: 75%;
+}
+
+a.img {
+    width: 60px;
+    height: 60px;
+    /* background: antiquewhite; */
+}
+
+.col.s1 {}
+
+.imgWrapper {
+    width: 100%;
+    height: 90px;
+    /* background: gray; */
+    margin: 1px;
+}
+
+.imgWrapper a.img {
+    width: 100%;
+    height: 100%;
+    /* background: #101010; */
+    background-image: url(../img/bridesmaid1.png);
+    display: block;
 }

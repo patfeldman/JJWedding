@@ -2,6 +2,14 @@ var Wedding = {};
 
 Wedding.Initialize = function(){
 
+    $('.materialboxed').materialbox();
+      // Initialize collapse button
+	$(".button-collapse").sideNav({
+      menuWidth: 300, // Default is 240
+    });
+
+
+
     $("#next,#prev").click(function() {        
         return Wedding.Scroll($(this).attr('id'));        
     });

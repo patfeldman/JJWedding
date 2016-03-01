@@ -10,7 +10,8 @@ Jenny  Dustin | We're Getting Married!
 </title>
 
 <!-- Meta Tags -->
-
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="description" content="Jenny Feldman &amp; Dustin Lehmann are tying the knot. Come celebrate with them!" />
 <meta name="keywords" content="Jenny Feldman, Dustin Lehmann, marriage, web design, scroll animation" />
@@ -18,22 +19,30 @@ Jenny  Dustin | We're Getting Married!
 
 <!-- Links -->
 
-<link rel="stylesheet" href="css/wedding.css" media="screen,projection" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
-<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
-<link href='https://fonts.googleapis.com/css?family=OpenSans:400,600,700,800,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Diplomata' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=OpenSansCondensed:300,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=PollerOne' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
 <link rel="icon" href="/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" /> 
 <link rel="image_src" href="images/fb-icon.jpg" />
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<link rel="stylesheet" href="css/wedding.css" media="screen,projection" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
+
+          
 
 <!-- Java Script -->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
 <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/wedding.js"></script>
 
 </head>
@@ -52,16 +61,41 @@ Jenny  Dustin | We're Getting Married!
 	<li class="food-nav" >Food</li>
 	<li class="gifts-nav" >Registry</li>
 </ul>
+<!--  <nav>
+    <div class="nav-wrapper">
+      <a href="#home" class="brand-logo">JJ+D</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+		<li ><a href="#home" class="home-nav" >JJ+D</a></li>
+		<li ><a href="#story" class="story-nav" >Story</a></li>
+		<li ><a href="#party" class="party-nav" >Party</a></li>
+		<li ><a href="#info" class="info-nav" >Event Info</a></li>
+		<li ><a href="#lodging" class="lodging-nav" >Lodging</a></li>
+		<li ><a href="#food" class="food-nav" >Food</a></li>
+		<li ><a href="#gifts" class="gifts-nav" >Registry</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+		<li ><a href="#home" class="home-nav" >JJ+D</a></li>
+		<li ><a href="#story" class="story-nav" >Story</a></li>
+		<li ><a href="#party" class="party-nav" >Party</a></li>
+		<li ><a href="#info" class="info-nav" >Event Info</a></li>
+		<li ><a href="#lodging" class="lodging-nav" >Lodging</a></li>
+		<li ><a href="#food" class="food-nav" >Food</a></li>
+		<li ><a href="#gifts" class="gifts-nav" >Registry</a></li>
+      </ul>
+    </div>
+  </nav>
+ -->
 </div>
 <!-- Home Frame -->
-	<div class="home slide">
+	<div id="home" class="home slide">
 		<div class="coupleImage">
 			<img src="img/coupleboat.png" class="img">
 		</div>
 		<div class="waterImage"></div>
 		<div class="content-box">
 			<div class="home-img">
-				<div class="h1">Jenny  Dustin</div>
+				<div class="h1">Jenny + Dustin</div>
 				<div class="h2">Hope It Floats X - Wedding Edition</div>
 			</div>
 			<div class="home-date">
@@ -83,83 +117,85 @@ Jenny  Dustin | We're Getting Married!
 	</div>
 <!-- Our Story Frame -->
 
-	<div class="story slide">
-		<div class="content-box boxLeft weddingContent">
+	<div id="story" class="story slide">
+		<div class="content-box boxLeft weddingContent ">
 			<div class="story-title sectionHeader">
 				<div class="h1">Our Story</div>
 				<div class="h2">Rollover the Timeline</div>
 			</div>	
-			<div class="timeline2 hearts">
-				<div class="arrowRow">
-					<div class="leftArrow"></div>
-					<div class="midArrow"></div>
-					<div class="rightArrow"></div>
-				</div>
-				<div class="newHighlights">
-					<div class="highlight hl1 selected" data-heart-num="1"></div>
-					<div class="highlight hl2" data-heart-num="2"></div>
-					<div class="highlight hl3" data-heart-num="3"></div>
-					<div class="highlight hl4" data-heart-num="4"></div>
-					<div class="highlight hl5" data-heart-num="5"></div>
-					<div class="highlight hl6" data-heart-num="6"></div>
-					<div class="highlight hl7" data-heart-num="7"></div>
-				</div>
-			</div>	
+			<div class="row">
+				<div class="timeline2 hearts col m8 offset-m2 s12">
+					<div class="arrowRow">
+						<div class="leftArrow"></div>
+						<div class="midArrow"></div>
+						<div class="rightArrow"></div>
+					</div>
+					<div class="newHighlights">
+						<div class="highlight hl1 selected" data-heart-num="1"></div>
+						<div class="highlight hl2" data-heart-num="2"></div>
+						<div class="highlight hl3" data-heart-num="3"></div>
+						<div class="highlight hl4" data-heart-num="4"></div>
+						<div class="highlight hl5" data-heart-num="5"></div>
+						<div class="highlight hl6" data-heart-num="6"></div>
+						<div class="highlight hl7" data-heart-num="7"></div>
+					</div>
+				</div>	
+			</div>
 			<div class="storyInfo">
-				<div class="highlights story1 selected">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>September, 2008</span><br />Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h4>
-						</div>
+				<div class="highlights story1 selected row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/1.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story2">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Dustin nervously asked Jenny to be his girlfriend.  The first kiss followed shortly after…</h4>
-						</div>
+				<div class="highlights story2 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/2.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5> on one  leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story3">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>June, 2010</span><br />Jenny  Dustin made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
-						</div>
+				<div class="highlights story3 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/3.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Ds on one another  BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story4">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>July, 2010</span><br />Jenny moved to Spokane, Washington for grad school (i.e.) Jenny  Dustin embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Jenny’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
-						</div>
+				<div class="highlights story4 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/4.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Je another at a stude Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story5">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>June-Aug 2011</span><br />Jenny  Dustin had the pleasure and privilege of taking TWO family vacations with the Feldman and Lehmann clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
-						</div>
+				<div class="highlights story5 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/5.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story6">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>January 22nd, 2012</span><br />Dustin flew to London to surprise Jenny and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
-						</div>
+				<div class="highlights story6 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/1.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story7">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
-						</div>
+				<div class="highlights story7 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/2.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
 	
@@ -171,77 +207,79 @@ Jenny  Dustin | We're Getting Married!
 				<div class="h1">HiFstory</div>
 				<div class="h2">Rollover the Timeline</div>
 			</div>	
-			<div class="timeline2 boats">
-				<div class="arrowRow">
-					<div class="leftArrow"></div>
-					<div class="midArrow"></div>
-					<div class="rightArrow"></div>
-				</div>
-				<div class="newHighlights">
-					<div class="highlight hl1 selected" data-heart-num="1"></div>
-					<div class="highlight hl2" data-heart-num="2"></div>
-					<div class="highlight hl3" data-heart-num="3"></div>
-					<div class="highlight hl4" data-heart-num="4"></div>
-					<div class="highlight hl5" data-heart-num="5"></div>
-					<div class="highlight hl6" data-heart-num="6"></div>
-					<div class="highlight hl7" data-heart-num="7"></div>
+			<div class="row">
+				<div class="timeline2 boats col m8 offset-m2 s12">
+					<div class="arrowRow">
+						<div class="leftArrow"></div>
+						<div class="midArrow"></div>
+						<div class="rightArrow"></div>
+					</div>
+					<div class="newHighlights">
+						<div class="highlight hl1 selected" data-heart-num="1"></div>
+						<div class="highlight hl2" data-heart-num="2"></div>
+						<div class="highlight hl3" data-heart-num="3"></div>
+						<div class="highlight hl4" data-heart-num="4"></div>
+						<div class="highlight hl5" data-heart-num="5"></div>
+						<div class="highlight hl6" data-heart-num="6"></div>
+						<div class="highlight hl7" data-heart-num="7"></div>
+					</div>
 				</div>
 			</div>	
 			<div class="storyInfo">
-				<div class="highlights story1 selected">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>September, 2008</span><br />Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h4>
-						</div>
+				<div class="highlights story1 selected row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/1.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story2">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>April, 2009</span><br />On a rainy spring evening in Seattle, with Norah Jones playing ever so softly in the background, Dustin nervously asked Jenny to be his girlfriend.  The first kiss followed shortly after…</h4>
-						</div>
+				<div class="highlights story2 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/2.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5> on one  leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story3">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>June, 2010</span><br />Jenny  Dustin made a wonderful journey to Scotland together.  It was on this trip they decided tea times should be institutionalized in the United States and that they wouldn’t mind having a pet sheep someday.</h4>
-						</div>
+				<div class="highlights story3 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/3.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Ds on one another  BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story4">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>July, 2010</span><br />Jenny moved to Spokane, Washington for grad school (i.e.) Jenny  Dustin embarked upon a two-year long-distance relationship.  They endured tedious drives across the state, bad skype connections, and a few tearful goodbyes (on Jenny’s end), but they survived and decided to get married, soooooo it all worked out.  </h4>
-						</div>
+				<div class="highlights story4 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/4.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Je another at a stude Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story5">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>June-Aug 2011</span><br />Jenny  Dustin had the pleasure and privilege of taking TWO family vacations with the Feldman and Lehmann clans: they socialized with sea turtles in Kauai and made pleasantries with mosquitoes in Minnesota.</h4>
-						</div>
+				<div class="highlights story5 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/5.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story6">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/cakeboat.png"></div>
-						<div class="imgTxt">
-							<h4><span>January 22nd, 2012</span><br />Dustin flew to London to surprise Jenny and propose to her on the banks of the Thames River, just steps from Westminster Abbey.  She said yes, and they hopped happily back across the pond to begin the adventure of future wedded bliss.</h4>
-						</div>
+				<div class="highlights story6 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/1.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
-				<div class="highlights story7">
-					<div class="imgContainer">
-						<div class="imgBg"><img src="img/couple.png"></div>
-						<div class="imgTxt">
-							<h4><span>January 23rd, 2012</span><br />Wedding stress began...</h4>
-						</div>
+				<div class="highlights story7 row">
+					<div class="imgBg col m2 offset-m2 s4">
+						<img class="materialboxed"  src="img/couple/2.jpg">
+  					</div>
+					<div class="imgTxt col m6 s8 ">
+						<div class="flow-text"><h4>September, 2008</h4><h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
 					</div>
 				</div>
 	
@@ -256,40 +294,43 @@ Jenny  Dustin | We're Getting Married!
 	
 <!-- Wedding Party Frame -->
 	
-	<div class="party slide">
+	<div id="party" class="party slide">
 		<div class="content-box boxLeft weddingContent">
 			<div class="sectionHeader">
 				<div class="h1">The Wedding Party</div>
 				<div class="h2">The people standing beside us!</div>
 			</div>
 
-			<div class="weddingPartyGroup">
-				<div class="groomsmen">
-					<h3 class="wp-title">Groomsmen</h3>
-					
-					<div class="party-gallery">
-						<a class="wp one" rel="guys-gallery" href="images/gallery/guys1.jpg" title="BEST MAN: Josiah Brown">Photo One<span></span></a>
-						<a class="wp two" rel="guys-gallery" href="images/gallery/guys2.jpg" title="Levi Lehmann">Photo One<span></span></a>
-						<a class="wp three" rel="guys-gallery" href="images/gallery/guys3.jpg" title="Trevor White">Photo One<span></span></a>
-						<a class="wp four" rel="guys-gallery" href="images/gallery/guys4.jpg" title="Aaron McConkey">Photo One<span></span></a>
-						<a class="wp five" rel="guys-gallery" href="images/gallery/guys5.jpg" title="Chris Kyle">Photo One<span></span></a>
-						<a class="wp six" rel="guys-gallery" href="images/gallery/guys6.jpg" title="Chris Hanke">Photo One<span></span></a>
-						<a class="wp seven" rel="guys-gallery" href="images/gallery/guys7.jpg" title="Jake Kirkwood">Photo One<span></span></a>
-						<div class="clearer"></div>
+			<div class="sectionBody valign-wrapper">
+				<div class="weddingPartyGroup valign">
+					<div class="officiant row">
+						<h2 class="wp-title col s12 m3 offset-m1 center ">Officiant</h2>
+
+						<div class="imgWrapper col s8 offset-s2 m1 offset-m3"><a class="img" rel="guys-gallery" href="img/party/guys4.jpg" title="Aaron McConkey"></a></div>
 					</div>
-				</div>
-				
-				<div class="bridesmaids">
-					<h3 class="wp-title">Bridesmaids</h3>
+
+					<div class="bridesmaids row">
+						<h2 class="wp-title col s12 m3 offset-m1 center ">Bridesmaids</h2>
+						
+						<div class="imgWrapper col s1 offset-s2 m1"><a class="img" rel="guys-gallery" href="img/party/guys1.jpg" title="BEST MAN: Josiah Brown"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys2.jpg" title="Levi Lehmann"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys3.jpg" title="Trevor White"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys4.jpg" title="Aaron McConkey"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys5.jpg" title="Chris Kyle"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys6.jpg" title="Chris Hanke"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys7.jpg" title="Jake Kirkwood"></a></div>
+					</div>
 					
-					<div class="party-gallery">
-						<a class="wp one" rel="girls-gallery" href="images/gallery/girls1.jpg" title="MAID OF HONOR: Ashlea Holcomb">Photo One<span></span></a>
-						<a class="wp two" rel="girls-gallery" href="images/gallery/girls2.jpg" title="MATRON OF HONOR: Mali Hawkins">Photo One<span></span></a>
-						<a class="wp three" rel="girls-gallery" href="images/gallery/girls3.jpg" title="Heidi Lehmann">Photo One<span></span></a>
-						<a class="wp four" rel="girls-gallery" href="images/gallery/girls4.jpg" title="Amy Archibald">Photo One<span></span></a>
-						<a class="wp five" rel="girls-gallery" href="images/gallery/girls5.jpg" title="Kashley Ricedorff">Photo One<span></span></a>
-						<a class="wp six" rel="girls-gallery" href="images/gallery/girls6.jpg" title="Beth Buer">Photo One<span></span></a>
-						<a class="wp seven" rel="girls-gallery" href="images/gallery/girls7.jpg" title="Kate Spencer">Photo One<span></span></a>
+					<div class="groomsmen row">
+						<h2 class="wp-title col s12 m3 offset-m1 center ">Groomsmen</h2>
+						
+						<div class="imgWrapper col s1 offset-s2 m1"><a class="img" rel="guys-gallery" href="img/party/guys1.jpg" title="BEST MAN: Josiah Brown"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys2.jpg" title="Levi Lehmann"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys3.jpg" title="Trevor White"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys4.jpg" title="Aaron McConkey"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys5.jpg" title="Chris Kyle"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys6.jpg" title="Chris Hanke"></a></div>
+						<div class="imgWrapper col s1 m1"><a class="img" rel="guys-gallery" href="img/party/guys7.jpg" title="Jake Kirkwood"></a></div>
 					</div>
 				</div>
 			</div>
@@ -302,7 +343,7 @@ Jenny  Dustin | We're Getting Married!
 
 <!-- Event Info Frame -->
 
-	<div class="info slide">
+	<div id="info" class="info slide">
 		<div class="content-box boxLeftHalf weddingContent">
 			<div class="info-content">
 				<h3>Ceremony at 5:30pm</h3>
@@ -326,7 +367,7 @@ Jenny  Dustin | We're Getting Married!
 	
 <!-- Logding Frame -->
 	
-	<div class="lodging slide">
+	<div id="lodging" class="lodging slide">
 		<div class="content-box boxLeftHalf weddingContent">
 		</div>
 		<div class="content-box boxRightHalf hifContent">
@@ -340,7 +381,7 @@ Jenny  Dustin | We're Getting Married!
 
 <!-- RSVP Frame -->
 	
-	<div class="rsvp slide">
+	<div id="rsvp" class="rsvp slide">
 		<div class="content-box boxLeft weddingContent">
 		
 			<div class="rsvp-title"><h1>RSVP: Come Join the Party!</h1></div>
@@ -385,7 +426,7 @@ Jenny  Dustin | We're Getting Married!
 	
 <!-- Gifts Frame -->
 	
-	<div class="gifts slide">
+	<div id="gifts" class="gifts slide">
 		<div class="content-box">
 			
 			<div class="gifts-title"><h1>Gifts &amp; Registry</h1></div>
