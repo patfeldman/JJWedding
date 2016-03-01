@@ -21,8 +21,11 @@ Wedding.Initialize = function(){
         return false;
     });
 
-    $("ul#Navigation li").on("click", function(e){
-    	var id = $(e.target).attr("class");
+    $("ul#Navigation li, ul#NavigationSmall li").on("click", function(e){
+    	var $target = $(e.target);
+    	if (!$target.is("li")) $target = $target.closest("li");
+    	var id = $target.attr("class");
+
     	var gotoId = id.replace("-nav", "");
     	Wedding.ScrollNav(gotoId);
     });
