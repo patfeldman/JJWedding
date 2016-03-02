@@ -24,10 +24,14 @@ Wedding.Initialize = function(){
     $("ul#Navigation li, ul#NavigationSmall li").on("click", function(e){
     	var $target = $(e.target);
     	if (!$target.is("li")) $target = $target.closest("li");
-    	var id = $target.attr("class");
+    	var id = $target.attr("class").split(" ")[0];
 
     	var gotoId = id.replace("-nav", "");
     	Wedding.ScrollNav(gotoId);
+    });
+	
+    $("#home .rsvpText").on("click", function(e){
+    	Wedding.ScrollNav("rsvp");
     });
 	
 

@@ -125,7 +125,7 @@ ul#Navigation li, ul#NavigationSmall li {
     font-size: 21px;
     font-weight: 600;
     text-shadow: rgb(0, 0, 0) 2px 2px 0;
-    /* line-height: 34px; */
+    line-height: 34px;
 }  
 ul#Navigation li:hover, ul#NavigationSmall li:hover {
     	color: #ABDDC6;
@@ -232,7 +232,7 @@ ul#NavigationSmall li{
 
 /* EVENT INFO */
 .info {
-	background-color: #bcaaa4;
+	background-color: initial;
 }
 
 .map-content{
@@ -447,9 +447,9 @@ ul#NavigationSmall li{
 .rsvp-now{
 	display:block;
 	margin:0 auto;
-	margin-top:30px;
-	width:780px;
-	height: 474px;
+	/* margin-top:30px; */
+	/* width: 100%; */
+	padding: 10px 20px;
 }
 .labels {
 	position:relative;
@@ -543,16 +543,16 @@ ul#NavigationSmall li{
 .submit-btn{
 	position:relative;
 	padding: 5px 53px 5px 53px;
-	margin-top:20px;
+	/* margin-top:20px; */
 	margin-left:0;
 	margin-right:0;
-	margin-bottom:0;
+	margin-bottom: 10px;
 	background-color:rgb(248,191,84);
 	font-family: 'Open Sans', arial;
 	font-size: 2.4rem;
 	font-weight: bold;
 	color: #FFFFFF;
-	text-decoration:none;
+	/* text-decoration:none; */
 	text-shadow: 1px 1px 1px #000;
 	cursor:pointer;
 	-webkit-transition-property:color, background-color;
@@ -568,7 +568,8 @@ ul#NavigationSmall li{
 	-ms-transition-duration: .5s, .5s;
 	-ms-transition-timing-function: linear, ease-in;
 	/* width: 100%; */
-	/* border-radius: 1px 4px 1px 4px; */
+	border-radius: 1px 30px 1px 30px;
+	border: none;
 }
 
 .submit-btn:hover {
@@ -581,6 +582,7 @@ ul#NavigationSmall li{
 	clear:both;
 	margin-top:20px;
 	text-align:center;
+	font-size: 18px;
 }
 .questions a{
 	color:rgb(248,191,84);
@@ -747,10 +749,11 @@ ul#NavigationSmall li{
 
 a.rsvpText {
     font-family: Open Sans Condensed;
-    color: #463D3D;
+    color: #463D3E;
     font-size: 47px;
     line-height: 86px;
     text-shadow: 1px 3px 6px #fff;
+    cursor: pointer;
 }
 
 .home-date2 {
@@ -1081,9 +1084,9 @@ img.partyImg {
     background-color: #8F8E98;
 }
 
-div.info div.sectionHeader div.h1 {
-    text-shadow: 2px 2px 1px #FFF28D;
-    color: #4C4C4C;
+div#info div.sectionHeader div.h1 {
+    text-shadow: 0px 0px 10px #FF8A65;
+    color: #000000;
 }
 
 .info .sectionHeader img {
@@ -1120,6 +1123,7 @@ div.info div.sectionHeader div.h1 {
     /* text-align: center; */
     /* position: relative; */
     width: 100%;
+    /* height: 100%; */
 }
 
 h5 {
@@ -1135,8 +1139,9 @@ nav {
     background-color: rgba(0,0,0,0.44);
 }
 
-.sectionBody.valign-wrapper {
-    height: 75%;
+div#food {
+    /* height: 486px; */
+    overflow: hidden;
 }
 
 a.img {
@@ -1166,7 +1171,7 @@ a.img {
 }
 
 .mapCard {
-    background: #FFF28D;
+    background: #FF8A65;
     font-family: pacifico;
     /* font-size: 1.74rem; */
     /* height: 250px !important; */
@@ -1212,7 +1217,7 @@ a.location:hover {
 }
 
 .descCard .card-title {
-    background: #FFF28D;
+    background: #FF8A65;
     color: white;
     text-shadow: 1px 1px 10px black;
     border-radius: 10px 10px 0 0;
@@ -1235,6 +1240,7 @@ a.location:hover {
 
 div#lodging {
     background-color: #54dfff;
+    overflow: hidden;
 }
 
 .bgImg {
@@ -1294,27 +1300,27 @@ div#lodging {
     background-repeat: no-repeat;
 }
 
-#lodging .descCard{
+#lodging .descCard, #food .descCard{
 	width:100%;
 	height: 250px;
-	margin-top: -20px;
+	/* margin-top: -20px; */
 }
 #lodging .descCard .card-title{
 	background-color: #DA585F;
 }
 
-#lodging .cardRow{
+#lodging .cardRow, #food .cardRow{
 	width:100%;
 }
 
-.bgImg.cloud.cloud1 {left: 10vw; top: 210px;}
-.bgImg.cloud.cloud2 {left: 23vw; top: 100px;}
-.bgImg.cloud.cloud3 {left: 36vw; top: 180px;}
-.bgImg.cloud.cloud4 {left: 75vw; top: 160px;}
-.bgImg.cloud.cloud5 {left: 85vw; top: 250px;}
+.bgImg.cloud.cloud1 {left: 30vw;top: 65vh;}
+.bgImg.cloud.cloud2 {left: 4vw;top: 20vh;}
+.bgImg.cloud.cloud3 {left: 50vw;top: 44vh;}
+.bgImg.cloud.cloud4 {left: 69vw; top: 160px;}
+.bgImg.cloud.cloud5 {left: 79vw;top: 70vh;}
 
 #food{
-	background-color: #ff8a65;
+	background-color: #FF8A65;
 }
 
 
@@ -1331,10 +1337,15 @@ div#lodging {
     background-image: url(../img/foodtruck.png);
     width: 193px;
     height: 100px;
-    /* background-repeat: repeat-x; */
-    bottom: 28px;
-    left: 20vw;
+    bottom:15px;
+    -webkit-animation: backandforth 32s linear;
+    -webkit-animation-iteration-count:infinite;
+    animation: backandforth 32s linear;
+    animation-iteration-count:infinite;
 }
+@-webkit-keyframes backandforth {0%{left:-10%;} 100%{left:110%;} }
+
+@keyframes backandforth {0%{left:-193px;} 100%{left:105%;} }
 
 @media only screen and (max-width: 900px)  {
 	.home-img .h1 {
@@ -1390,3 +1401,41 @@ div#lodging {
 }
 
 #NavigationSmall li.words {margin-top: -2px;}
+
+a.rsvpText:hover {
+    text-decoration: underline;
+    /* color: #636363; */
+}
+
+a.location {
+    color: yellow !important;
+}
+
+a.location:hover {
+    text-decoration: underline;
+}
+
+#rsvp .sectionHeader .h1 {
+    color: #F8BF54;
+    text-shadow: none;
+}
+
+#rsvp .sectionBody {
+    width: 75%;
+    margin: auto;
+    padding-top: 25px;
+}
+
+#food .descCard .card-title {
+    background: #5FC8E0;
+}
+
+#food .h1 {text-shadow: 1px 1px 1px #5FC8E0;}
+
+#info .sectionBody.valign-wrapper {
+    height: 75%;
+}
+
+#lodging .sectionHeader .h1 {
+    font-size: 45px;
+}
