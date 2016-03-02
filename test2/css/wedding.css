@@ -383,52 +383,6 @@ ul#NavigationSmall li{
 	filter:alpha(opacity=100);
 }
 
-.groomsmen .one span {
-	background: url(../img/groomsman1.png) no-repeat;
-}
-.groomsmen .two span {
-	background: url(../img/groomsman2.png) no-repeat;
-}
-.groomsmen .three span {
-	background: url(../img/groomsman3.png) no-repeat;
-}
-.groomsmen .four span {
-	background: url(../img/groomsman4.png) no-repeat;
-}
-.groomsmen .five span {
-	background: url(../img/groomsman5.png) no-repeat;
-}
-.groomsmen .six span {
-	background: url(../img/groomsman2.png) no-repeat;
-}
-.groomsmen .seven span {
-	background: url(../img/groomsman3.png) no-repeat;
-}
-
-
-.bridesmaids .one span {
-	background: url(../img/bridesmaid1.png) no-repeat;
-}
-.bridesmaids .two span {
-	background: url(../img/bridesmaid2.png) no-repeat;
-}
-.bridesmaids .three span {
-	background: url(../img/bridesmaid3.png) no-repeat;
-}
-.bridesmaids .four span {
-	background: url(../img/bridesmaid4.png) no-repeat;
-}
-.bridesmaids .five span {
-	background: url(../img/bridesmaid5.png) no-repeat;
-}
-.bridesmaids .six span {
-	background: url(../img/bridesmaid6.png) no-repeat;
-}
-.bridesmaids .seven span {
-	background: url(../img/bridesmaid1.png) no-repeat;
-}
-
-
 
 /* RSVP */
 
@@ -1160,14 +1114,13 @@ a.img {
 }
 
 .imgWrapper a.img {
-    width: 100%;
-    height: 100%;
-    /* background: #101010; */
     background: url(../img/bridesmaid1.png) no-repeat;
     display: block;
     background-position-x: center;
     background-size: contain;
     background-position-y: center;
+    border: solid 3px #ABDDC6;
+    border-radius: 100px;
 }
 
 .mapCard {
@@ -1347,52 +1300,6 @@ div#lodging {
 
 @keyframes backandforth {0%{left:-193px;} 100%{left:105%;} }
 
-@media only screen and (max-width: 900px)  {
-	.home-img .h1 {
-	    font-size: 43px;
-	    line-height: 58px;
-	}
-
-	.home-img .h2 {
-	    font-size: 27px;
-	    line-height: 36px;
-	}
-
-	.coupleImage {
-	    right: 0;
-	    left:initial
-	}
-	.content-box{
-		/* top:10vh; */
-	}
-
-
-	.party .sectionHeader .h1 {
-	    font-size: 30px;
-	    line-height: 44px;
-	}
-
-	.timeline2{
-	    width: 80vw;
-	}
-	#lodging .tent {
-	    right: 0;
-	}
-}
-@media only screen and (max-width: 600px)  {
-	.navigatorRight, .navigatorLeft {
-	    top: 100%;
-	    margin-top: -70px;
-	}
-	#info, #food, #lodging, #rsvp, #party{
-		min-height: 1100px;
-	}
-	#info .descCardWrapper {
-	    min-height: 150px;
-	    padding-top: 45px;
-	}
-
-}
 
 
 #NavigationSmall i.material-icons {
@@ -1438,4 +1345,110 @@ a.location:hover {
 
 #lodging .sectionHeader .h1 {
     font-size: 45px;
+}
+
+
+.groomsmen .imgWrapper a.one {
+	background-image: url(../img/groomsmen1.png);
+}
+.groomsmen .imgWrapper a.two {
+	background-image: url(../img/groomsmen2.png);
+}
+.groomsmen .imgWrapper a.three {
+	background-image: url(../img/groomsmen3.png);
+}
+.groomsmen .imgWrapper a.four {
+	background-image: url(../img/groomsmen4.png);
+}
+.groomsmen .imgWrapper a.five {
+	background-image: url(../img/groomsmen5.png);
+}
+.groomsmen .imgWrapper a.six {
+	background-image: url(../img/groomsmen6.png);
+}
+.groomsmen .imgWrapper a.seven {
+	background-image: url(../img/groomsmen1.png);
+}
+
+
+.bridesmaids .imgWrapper a.one {
+	background-image: url(../img/bridesmaid1.png);
+}
+.bridesmaids .imgWrapper a.two {
+	background-image: url(../img/bridesmaid2.png);
+}
+.bridesmaids .imgWrapper a.three {
+	background-image: url(../img/bridesmaid3.png);
+}
+.bridesmaids .imgWrapper a.four {
+	background-image: url(../img/bridesmaid4.png);
+}
+.bridesmaids .imgWrapper a.five {
+	background-image: url(../img/bridesmaid5.png);
+}
+.bridesmaids .imgWrapper a.six {
+	background-image: url(../img/bridesmaid6.png);
+}
+.bridesmaids .imgWrapper a.seven {
+	background-image: url(../img/bridesmaid1.png);
+}
+
+
+@media only screen and (max-width: 900px)  {
+	.home-img .h1 {
+	    font-size: 43px;
+	    line-height: 58px;
+	}
+
+	.home-img .h2 {
+	    font-size: 27px;
+	    line-height: 36px;
+	}
+
+	.coupleImage {
+	    right: 0;
+	    left:initial
+	}
+	.content-box{
+		/* top:10vh; */
+	}
+
+
+	.party .sectionHeader .h1 {
+	    font-size: 30px;
+	    line-height: 44px;
+	}
+
+	.timeline2{
+	    width: 80vw;
+	}
+	#lodging .tent {
+	    right: 0;
+	}
+}
+@media only screen and (max-width: 600px)  {
+	.navigatorRight, .navigatorLeft {
+	    top: 100%;
+	    margin-top: -70px;
+	}
+	#info, #food, #lodging, #rsvp{
+		min-height: 1100px;
+	}
+	#story {
+		min-height: 750px;
+	}
+	#party {
+		min-height: 850px;
+	}
+	#info .descCardWrapper {
+	    min-height: 150px;
+	    padding-top: 45px;
+	}
+
+}
+
+
+
+#party .sectionBody.valign-wrapper {
+    height: 75%;
 }
