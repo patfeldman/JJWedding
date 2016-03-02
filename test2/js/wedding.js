@@ -8,7 +8,7 @@ Wedding.Initialize = function(){
       menuWidth: 300, // Default is 240
     });
 
-
+	$('.tooltipped').tooltip({delay: 70});
 
     $("#next,#prev").click(function() {        
         return Wedding.Scroll($(this).attr('id'));        

@@ -65,7 +65,7 @@ body {
 	margin:0;
 	padding:0;
 	font-family:Arial, Helvetica, sans-serif;
-	background-color:#3ba7b8;
+	background-color: #3ba7b8;
 	font-size:20px;
 	line-height: 20px;
 	min-height: 600px;
@@ -821,10 +821,10 @@ img.img {
     background-image: url(../img/next-right-dk.png);
 }
 
-.party .sectionHeader .h1 {
+#party .sectionHeader .h1 {
     font-size: 40px;
     line-height: 70px;
-    text-shadow: 3px 3px 2px #000000;
+    text-shadow: 0px 0px 4px #000000;
     color: white;
 }
 
@@ -1111,6 +1111,7 @@ a.img {
     height: 90px;
     /* background: gray; */
     margin: 1px;
+    margin-top: 10px;
 }
 
 .imgWrapper a.img {
@@ -1215,7 +1216,7 @@ div#lodging {
     background-image: url(../img/hotel.png);
     width: 163px;
     height: 220px;
-    left: 0;
+    left: 19vw;
     bottom: 12px;
 }
 
@@ -1241,7 +1242,7 @@ div#lodging {
     background-image: url(../img/citybg.png);
     width: 150px;
     height: 63px;
-    left: 167px;
+    left: 4vw;
     bottom: 15px;
     /* background-repeat: repeat-x; */
 }
@@ -1394,6 +1395,27 @@ a.location:hover {
 }
 
 
+#food .sectionBody.valign-wrapper {
+    height: 60%;
+}
+
+#lodging .sectionBody.valign-wrapper {
+    height: 60%;
+}
+
+#party .sectionBody.valign-wrapper {
+    height: 75%;
+}
+
+.material-tooltip {
+    color: white;
+    font-family: Open Sans Condensed;
+    border : 4px double #4A4A4A;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+
 @media only screen and (max-width: 900px)  {
 	.home-img .h1 {
 	    font-size: 43px;
@@ -1414,16 +1436,13 @@ a.location:hover {
 	}
 
 
-	.party .sectionHeader .h1 {
+	#party .sectionHeader .h1 {
 	    font-size: 30px;
 	    line-height: 44px;
 	}
 
 	.timeline2{
 	    width: 80vw;
-	}
-	#lodging .tent {
-	    right: 0;
 	}
 }
 @media only screen and (max-width: 600px)  {
@@ -1444,11 +1463,26 @@ a.location:hover {
 	    min-height: 150px;
 	    padding-top: 45px;
 	}
+	#lodging .tent {
+	    right: 0;
+	}
+	#lodging .city {
+    	right: 50vw;
+    	left: initial;
+ }
+	#lodging .hotel {
+    	left: 2vw;
+	}
 
 }
 
 
-
-#party .sectionBody.valign-wrapper {
-    height: 75%;
 }
+
+@media only screen and (max-width: 400px)  {
+#lodging .sectionHeader .h1 {
+	font-size: 35px;
+	}
+}
+
+
