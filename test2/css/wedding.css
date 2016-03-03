@@ -942,7 +942,6 @@ img.partyImg {
     background-repeat: repeat-x;
     background-position: center;
     position: absolute;
-    margin: 5px;
 }
 
 .newHighlights {
@@ -1630,13 +1629,14 @@ a.location:hover {
     width: 40px;
     height: 47px;
     position:absolute;
-    /* left: 5px; */
-    animation: wait 10s steps(2);
+    left: 5px;
+    animation: wait 5s steps(2);
     animation-iteration-count: infinite;
     background-size: inherit;
     background-repeat: no-repeat;
     /* background-size: 40px; */
     /* background-position-x: -40px; */
+    bottom: 59px;
 }
 
 @keyframes wait {
@@ -1648,18 +1648,41 @@ a.location:hover {
 #food .luigiTranslate {
     width: 69px;
     height: 82px;
-    bottom: 40px;
+    bottom: 45px;
     position: absolute;
     animation: backandforthluigi 32s linear;
     animation-iteration-count: infinite;
-
   }
 
 @keyframes backandforthluigi {
     0% {
-        left: -600vw;
+        left: -500vw;
     }
     100% {
         left: 105%;
     }
+}
+
+
+.bgImg.wolverine {
+    background-image: url(../img/wolverine.png);
+    width: 55px;
+    height: 77px;
+    animation: runwolverine .75s steps(6);
+    animation-iteration-count: infinite;
+    background-size: initial;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+@keyframes runwolverine {
+	from { background-position:    0px; }
+    to { background-position: -326px; }
+ }
+
+
+.imgWrapper a.img:hover {
+    background-color: #ABDDC6;
 }
