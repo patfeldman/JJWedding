@@ -75,6 +75,42 @@ Wedding.Initialize = function(){
 		$stories.find(".story" + heartNum).addClass("selected");
 	});
 
+
+    //select all the a tag with name equal to modal
+    $('a[name=modal]').click(function(e) {
+        //Cancel the link behavior
+        e.preventDefault();
+        //transition effect     
+        $('#mask').fadeIn(300);   
+        $('#mask #maskBg').fadeTo("fast",0.8);  
+    
+        //Get the A tag
+        var image_url = "img/profile/" + $(this).attr('data-image');
+        var name = $(this).attr('data-tooltip');
+        
+        // create <img>-element on the fly, as you might not need it beforehand
+        var $image = $('<img/>', { src: image_url });
+        $image.addClass('personImage').addClass('valign');
+        // append it as a child to another element
+        var $wrapper = $("#mask .image-wrapper");
+        $wrapper.append($image);        
+
+        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(name);
+        $("#mask .caption-wrapper").append($caption);
+        //transition effect
+        $image.fadeIn(1000); 
+    
+    });
+        
+    //if mask is clicked
+    $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+        $("#mask .image-wrapper").html("");
+        $("#mask .caption-wrapper").html("");
+    }); 
+
+
 };
 
 

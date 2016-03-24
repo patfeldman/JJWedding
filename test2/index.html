@@ -37,6 +37,19 @@
 </head>
 
 <body>
+            <!-- #customize your modal window here -->
+
+
+        
+        <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->    
+        <div id="mask">
+            <div class="valign-wrapper image-wrapper">
+            </div>
+            <div class="valign-wrapper caption-wrapper">
+            </div>
+            <div id="maskBg"></div>
+        </div>
+
     <!-- Side Navigation -->
     <div id="Header">
         <ul id="Navigation" class="hide-on-small-only">
@@ -472,61 +485,61 @@
                 <div class="officiant row">
                     <h2 class="wp-title col s12 m12 l2 m-center">Officiant</h2>
                     <div class="imgWrapper row col s12 m12 l2 offset-l3">
-                        <a class="img off tooltipped col s2 offset-s5 m2 offset-m5 l6 offset-l3" data-position="bottom" data-delay="50" data-tooltip="OFFICIANT : Ashley Koyala" rel="off-gallery" href="img/party/off1.jpg" title="Ashley Koyala"></a>
+                        <a class="img off tooltipped col s2 offset-s5 m2 offset-m5 l6 offset-l3" data-position="bottom" data-delay="50" data-tooltip="OFFICIANT : Ashley Koyala" rel="off-gallery" name="modal" data-image="ashley.jpg" title="Ashley Koyala"></a>
                     </div>
                 </div>
                 <div class="bridesmaids row">
                      <h2 class="wp-title col s12 m12 l3 m-center">Bridesmaids</h2>
                      <div class="imgWrapper row col s12 m12 l1 ">
-                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12"  data-position="bottom" data-delay="50" data-tooltip="MAID OF HONOR : Emily Feldman" rel="girls-gallery" href="img/party/girls1.jpg" title="MAID OF HONOR: Emily Feldman"></a>
+                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12"  data-position="bottom" data-delay="50" data-tooltip="MAID OF HONOR : Emily Feldman" rel="girls-gallery" name="modal" data-image="Emily.jpg" title="MAID OF HONOR: Emily Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jacqueline Feldman" rel="girls-gallery"  href="img/party/girls2.jpg" title="Jacqueline Feldman"></a>
+                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jacqueline Feldman" rel="girls-gallery"  name="modal" data-image="jacque.jpg" title="Jacqueline Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jennifer Tanzman" rel="girls-gallery"  href="img/party/girls3.jpg" title="Jennifer Tanzman"></a>
+                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jennifer Tanzman" rel="girls-gallery"  name="modal" data-image="tanzman.jpg" title="Jennifer Tanzman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jenny Whitlow" rel="girls-gallery"  href="img/party/girls4.jpg" title="Jenny Whitlow"></a>
+                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jenny Whitlow" rel="girls-gallery"  name="modal" data-image="whitlow.jpg" title="Jenny Whitlow"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nikole Ballard" rel="girls-gallery"  href="img/party/girls5.jpg" title="Nikole Ballard"></a>
+                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nikole Ballard" rel="girls-gallery"  name="modal" data-image="nikole.jpg" title="Nikole Ballard"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Anne Davidson" rel="girls-gallery"  href="img/party/girls6.jpg" title="Anne Davidson"></a>
+                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Anne Davidson" rel="girls-gallery"  name="modal" data-image="anne.jpg" title="Anne Davidson"></a>
                     </div>
                     <div class="imgWrapper col m1 l1"> 
-                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Makaela Wheeler Feldman" rel="girls-gallery"  href="img/party/girls7.jpg" title="Makaela Wheeler Feldman"></a>
+                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Makaela Wheeler Feldman" rel="girls-gallery"  name="modal" data-image="makay.jpg" title="Makaela Wheeler Feldman"></a>
                     </div>
                 </div>
                 <div class="groomsmen row">
                      <h2 class="wp-title col s12 m12 l3 m-center">Groomspeople</h2>
                      <div class="imgWrapper row col s12 m12 l1 ">
-                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12" data-position="bottom" data-delay="50" data-tooltip="BEST WOMAN : ELLY PRICE" rel="guys-gallery" href="img/party/guys1.jpg" title="BEST WOMAN: ELLY PRICE"></a>
+                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12" data-position="bottom" data-delay="50" data-tooltip="BEST WOMAN : ELLY PRICE" rel="guys-gallery" data-image="elly.jpg" name="modal" title="BEST WOMAN: ELLY PRICE"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Scott Moore" rel="guys-gallery" href="img/party/guys2.jpg" title="Scott Moore"></a>
+                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Scott Moore" rel="guys-gallery" data-image="scott.jpg" name="modal" title="Scott Moore"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Aaron Rice" rel="guys-gallery" href="img/party/guys3.jpg" title="Aaron Rice"></a>
+                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Aaron Rice" rel="guys-gallery" data-image="aaron.jpg" name="modal" title="Aaron Rice"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="David Feldman" rel="guys-gallery" href="img/party/guys4.jpg" title="David Feldman"></a>
+                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="David Feldman" rel="guys-gallery" data-image="david.jpg" name="modal" title="David Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Bob Feldman" rel="guys-gallery" href="img/party/guys5.jpg" title="Bob Feldman"></a>
+                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Bob Feldman" rel="guys-gallery" data-image="bob.jpg" name="modal" title="Bob Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Patrick Feldman" rel="guys-gallery" href="img/party/guys6.jpg" title="Patrick Feldman"></a>
+                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Patrick Feldman" rel="guys-gallery" data-image="pat.jpg" name="modal" title="Patrick Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Kevin Strohmeyer" rel="guys-gallery" href="img/party/guys7.jpg" title="Kevin Strohmeyer"></a>
+                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Kevin Strohmeyer" rel="guys-gallery" data-image="kevin.jpg" name="modal" title="Kevin Strohmeyer"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nic Ogle" rel="guys-gallery" href="img/party/guys7.jpg" title="Nic Ogle"></a>
+                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nic Ogle" rel="guys-gallery" data-image="nick.jpg" name="modal" title="Nic Ogle"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Timothy Arthur" rel="guys-gallery" href="img/party/guys7.jpg" title="Timothy Arthur"></a>
+                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Timothy Arthur" rel="guys-gallery" data-image="timothy.jpg" name="modal" title="Timothy Arthur"></a>
                     </div>
                 </div>
             </div>
