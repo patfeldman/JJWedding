@@ -47,6 +47,10 @@
             </div>
             <div class="valign-wrapper caption-wrapper">
             </div>
+
+            <div class="imgNavigatorLeft visible"></div>
+            <div class="imgNavigatorRight visible"></div>
+
             <div id="maskBg"></div>
         </div>
 
@@ -556,12 +560,6 @@
                 <div class="row">
                     <form name="rsvp-now" class="rsvp-now card z-depth-5" action="send.php" method="post" onsubmit="window.open('','my_form_target', 'width=300,height=120', true); this.target='my_form_target';">
                         <div class="row">
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Website Password</label>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="input-field col s6">
                                 <input id="first_name" type="text" class="validate">
                                 <label for="first_name">First Name</label>
@@ -583,6 +581,33 @@
                                 <label for="numguests">Number of Guests</label>
                             </div>
                         </div>
+                        <div class="row newSection">
+                            <span class="newSectionTitle">Are you Camping?</span>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 center">
+                                <input type="checkbox" id="campFri" />
+                                <label for="campFri">Friday Night</label>
+                            </div>
+                            <div class="input-field col s6 center">
+                                <input type="checkbox" id="campSat" />
+                                <label for="campSat">Saturday Night</label>
+                            </div>
+                        </div>
+                        <div class="row newSection withBorder">
+                            <span class="newSectionTitle">Are you Building a Boat?</span>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 center">
+                                <input type="checkbox" id="buildingBox" />
+                                <label for="buildingBox">Yes, Please</label>
+                            </div>
+                            <div class="input-field col s6 center">
+                                <input id="team_name" type="text" class="validate">
+                                <label for="team_name">Team Name</label>
+                            </div>
+                        </div>
+
                         <div class="submit">
                             <input class="submit-btn" type="submit" name='submit' value="submit" />
                         </div>

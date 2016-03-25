@@ -1,9 +1,20 @@
 var Wedding = {};
+Wedding.peoplePhotoIndex = 0;
+Wedding.peoplePhotoList = {};
+Wedding.peopleTitleList = {};
 
 Wedding.Initialize = function(){
 
-    $('.materialboxed').materialbox();
-      // Initialize collapse button
+    $allPeoplePhotos = $("#party").find(".weddingPartyGroup .imgWrapper a");
+    Wedding.peoplePhotoList = $allPeoplePhotos
+        .map(function() {
+            return $(this).attr("data-image");
+          }).get();
+    Wedding.peopleTitleList = $allPeoplePhotos
+        .map(function() {
+            return $(this).attr("data-tooltip");
+          }).get();
+
 	$(".button-collapse").sideNav({
       menuWidth: 300, // Default is 240
     });
@@ -76,6 +87,17 @@ Wedding.Initialize = function(){
 	});
 
 
+    $(".imgNavigatorLeft").on("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        Wedding.LoadPhoto(Wedding.peoplePhotoIndex-1);
+    });
+    $(".imgNavigatorRight").on("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        Wedding.LoadPhoto(Wedding.peoplePhotoIndex+1);
+    });
+
     //select all the a tag with name equal to modal
     $('a[name=modal]').click(function(e) {
         //Cancel the link behavior
@@ -83,43 +105,62 @@ Wedding.Initialize = function(){
         //transition effect     
         $('#mask').fadeIn(300);   
         $('#mask #maskBg').fadeTo("fast",0.8);  
-    
-        //Get the A tag
-        var image_url = "img/profile/" + $(this).attr('data-image');
-        var name = $(this).attr('data-tooltip');
-        
-        // create <img>-element on the fly, as you might not need it beforehand
-        var $image = $('<img/>', { src: image_url });
-        $image.addClass('personImage').addClass('valign');
-        // append it as a child to another element
-        var $wrapper = $("#mask .image-wrapper");
-        $wrapper.append($image);        
-
-        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(name);
-        $("#mask .caption-wrapper").append($caption);
-        //transition effect
-        $image.fadeIn(1000); 
-    
+        var dataImage = $(this).attr('data-image');
+        var index = Wedding.peoplePhotoList.indexOf(dataImage);
+        Wedding.LoadPhoto(index);
     });
         
     //if mask is clicked
     $('#mask').click(function () {
         $(this).hide();
         $('.window').hide();
-        $("#mask .image-wrapper").html("");
-        $("#mask .caption-wrapper").html("");
     }); 
 
+    Wedding.$mask = $("#mask");
 
 };
 
+
+Wedding.LoadPhoto = function(index){
+        //Get the A tag
+        var $imageWrapper = Wedding.$mask.find(".image-wrapper");
+        var $captionWrapper = Wedding.$mask.find(".caption-wrapper");
+        $imageWrapper.html("");
+        $captionWrapper.html("");
+
+        Wedding.peoplePhotoIndex = index;
+        var image_url = "img/profile/" + Wedding.peoplePhotoList[index];
+        var name = Wedding.peopleTitleList[index];
+        
+        // create <img>-element on the fly, as you might not need it beforehand
+        var $image = $('<img/>', { src: image_url });
+        $image.addClass('personImage').addClass('valign');
+        // append it as a child to another element
+        $imageWrapper.append($image);
+
+        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(name);
+        $captionWrapper.append($caption);
+        //transition effect
+        $image.fadeIn(1000); 
+
+        if (index === 0){
+            $("#mask .imgNavigatorLeft").addClass("none");
+        } else {
+            $("#mask .imgNavigatorLeft").removeClass("none");
+        }
+        if (index === (Wedding.peoplePhotoList.length - 1)){
+            $("#mask .imgNavigatorRight").addClass("none");
+        } else {
+            $("#mask .imgNavigatorRight").removeClass("none");            
+        }
+};
 
 Wedding.AnimateRight = function(){};
 
 
 Wedding.ScrollNav = function(id){
 	$('html,body').animate({scrollTop: $("."+id).offset().top},'slow');
-}
+};
 
 
 Wedding.Scroll = function(direction) {

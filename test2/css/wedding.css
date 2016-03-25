@@ -159,8 +159,10 @@ ul#NavigationSmall li {
 /* OUR STORY */
 
 .story {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
+    border: 6px double #DA585F;
+    /* margin-top: 40px; */
 }
 
 .story .content-box,
@@ -1175,7 +1177,8 @@ a.img {
 
 .imgWrapper {
     height: 90px;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .imgWrapper a.img {
@@ -1672,6 +1675,93 @@ div#info {
   height:203px;
 }
 
+.imgNavigatorRight, .imgNavigatorLeft {
+    height: 70px;
+    position: absolute;
+    width: 70px;
+    white-space: nowrap;
+    text-align: center;
+    top: 50%;
+    margin-top: -35px;
+    background-color: none;
+    z-index: 10;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgNavigatorRight{ 
+    right:0; 
+    background-image: url(../img/next-right.png);
+}
+.imgNavigatorLeft{ 
+    left:0; 
+    background-image: url(../img/next-left.png);
+}
+
+#lodging .detail {
+    /* padding-bottom: .5em; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+}
+
+#li {}
+
+#lodgingÂ .card-desc ul li {
+    padding-left: 10px;
+}
+
+#lodging .title {
+    font-family: Open Sans Condensed;
+    color: #505050;
+    /* text-shadow: 1px 0px 0px black; */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding-bottom: .5em;
+}
+
+.slide a.redNote {
+    color: #D35150;
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #A5A5A5;
+    font-family: Poller One;
+    font-weight: 100;
+    font-size: .9em;
+}
+
+.slide .note {
+    font-family: Open Sans;
+    font-weight: 100;
+    font-size: .8em;
+}
+
+.slide a.redNote:hover {
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+.slide li.bottom {
+    text-shadow: none;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.slide a.smallFont {
+    font-size: 15px;
+    text-transform: none;
+}
+
+.bigBottom {
+    padding-bottom: 1em;
+}
+
+#food .descCard ul li {
+    font-family: Open Sans;
+    font-weight: 500;
+}
 
 @media only screen and (min-width: 600px) {
     #info .sectionBody.valign-wrapper {
@@ -1741,7 +1831,7 @@ div#info {
         min-height: 800px;
     }
     #party {
-        min-height: 1400px;
+        min-height: 1200px;
     }
     #info .descCardWrapper {
         min-height: 150px;
@@ -1757,6 +1847,11 @@ div#info {
     #lodging .hotel {
         left: 2vw;
     }
+
+    .imgNavigatorRight, .imgNavigatorLeft {
+        height: 40px;
+        width: 40px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1768,73 +1863,6 @@ div#info {
     }
 }
 @media only screen and (max-height: 800px) and (min-width:1000px) {
-}
-
-
-
-#lodging .detail {
-    /* padding-bottom: .5em; */
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
-}
-
-#li {}
-
-#lodging .card-desc ul li {
-    padding-left: 10px;
-}
-
-#lodging .title {
-    font-family: Open Sans Condensed;
-    color: #505050;
-    /* text-shadow: 1px 0px 0px black; */
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: underline;
-    padding-bottom: .5em;
-}
-
-.slide a.redNote {
-    color: #D35150;
-    margin-right: 20px;
-    transition: color .3s ease;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 #A5A5A5;
-    font-family: Poller One;
-    font-weight: 100;
-    font-size: .9em;
-}
-
-.slide .note {
-    font-family: Open Sans;
-    font-weight: 100;
-    font-size: .8em;
-}
-
-.slide a.redNote:hover {
-    text-shadow: none;
-    text-decoration: underline;
-}
-
-.slide li.bottom {
-    text-shadow: none;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
-.slide a.smallFont {
-    font-size: 15px;
-    text-transform: none;
-}
-
-.bigBottom {
-    padding-bottom: 1em;
-}
-
-#food .descCard ul li {
-    font-family: Open Sans;
-    font-weight: 500;
 }
 
 
@@ -1851,13 +1879,13 @@ div#info {
     font-size: 10px;
 }
 
-@media only screen and (min-width: 360px) {
+@media only screen and (max-width: 360px) {
     .flow-text {
         font-size:1.2em !important;
     }
 }
 
-@media only screen and (min-width: 390px) {
+@media only screen and (min-width: 360px) {
     .flow-text {
         font-size:1.224em !important;
     }
@@ -1984,4 +2012,32 @@ img.personImage {
     position: fixed;
     z-index: 10001;
     bottom: 20px;
+}
+
+#rsvp .newSection {
+    border-top: 1px solid #EFEFEF;
+    padding-top: 15px;
+    text-align: center;
+    margin: 0;
+    font-family: Open Sans Condensed;
+    font-weight: 600;
+    color: #9E9E9E;
+    margin-top: 6px;
+}
+
+span.newSectionTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.input-field.col.s6 {
+    /* text-align: center; */
+}
+
+#rsvp .row {
+    margin-bottom: 5px;
+}
+
+#rsvp .withBorder {
+    margin-top: 40px;
 }
