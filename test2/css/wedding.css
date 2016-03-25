@@ -83,10 +83,10 @@ body {
 }
 
 .slide {
-    height: 100%; 
-    position: relative; 
-    margin: 0; 
-    padding: 0; 
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -1006,6 +1006,7 @@ img.partyImg {
     border-radius: 20px;
     margin-top: 10px;
     position: relative;
+    height: 65%;
 }
 
 .story .sectionHeader,
@@ -1042,9 +1043,7 @@ img.partyImg {
     /* display: none; */
 }
 
-.highlights img {
-    width: 100%;
-}
+.highlights img {/* width: 100%; */}
 
 .highlights {
     width: 100%;
@@ -1150,7 +1149,7 @@ div#info div.sectionHeader div.h1 {
 }
 
 h5 {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
     line-height: 117%;
     color: #E2848B;
 }
@@ -1522,12 +1521,17 @@ a.location:hover {
     border: 5px #4A4A4A double;
 }
 
-.material-tooltip {
-    color: white;
-    font-family: Open Sans Condensed;
-    border: 4px double #4A4A4A;
+#DynamicTooltip {
+    position: absolute;
+    border: solid 2px white;
+    background-color: #463D3D;
     border-radius: 5px;
-    font-weight: 900;
+    padding: 10px;
+    color: white;
+    font-family: Poller One;
+    z-index: 1000;
+    /* margin-top: 48px; */
+    font-size: 1.1rem;
 }
 
 #info .card .card-image img {
@@ -1537,7 +1541,9 @@ a.location:hover {
 }
 
 
-
+.img.photo {
+    max-width: 60px;
+}
 #food .luigi {
     background-image: url(../img/luigi.png);
     width: 50px;
@@ -1675,6 +1681,9 @@ div#info {
   height:203px;
 }
 
+.transparent{
+    opacity: 0;
+}
 .imgNavigatorRight, .imgNavigatorLeft {
     height: 70px;
     position: absolute;
@@ -2005,13 +2014,21 @@ img.personImage {
     text-shadow: 2px 2px 3px #fff;
 }
 
-.caption-wrapper {
+.caption-bottom-wrapper {
     width: 100%;
     text-align: center;
     margin: auto;
     position: fixed;
     z-index: 10001;
     bottom: 20px;
+}
+.caption-top-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    z-index: 10001;
+    top: 20px;
 }
 
 #rsvp .newSection {
@@ -2040,4 +2057,25 @@ span.newSectionTitle {
 
 #rsvp .withBorder {
     margin-top: 40px;
+}
+
+.card-image {
+}
+
+#story img {border-radius: 10px;}
+
+#story .card-image {padding: 0;margin: 0;}
+
+#story .card-image:after {
+    clear: both;
+    /* display: table; */
+    /* content: ""; */
+}
+
+#story .card {
+    padding-left: 0;
+}
+
+#story .card-content span {
+    color: #E15661;
 }

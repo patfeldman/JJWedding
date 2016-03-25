@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="description" content="Jenny Feldman &amp; Dustin Lehmann are tying the knot. Come celebrate with them!" />
-    <meta name="keywords" content="Jenny Feldman, Dustin Lehmann, marriage, web design, scroll animation" />
+    <meta name="keywords" content="Jenny Feldman, Dustin Lehmann, marriage, web design" />
     <meta name="author" content="http://www.DustinLehmann.com" />
     <!-- Links -->
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
@@ -29,30 +29,30 @@
     <link rel="stylesheet" href="css/wedding.css" media="screen,projection" type="text/css" />
     <!-- Java Script -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/wedding.js"></script>
 </head>
-
 <body>
-            <!-- #customize your modal window here -->
-
-
-        
-        <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->    
-        <div id="mask">
-            <div class="valign-wrapper image-wrapper">
-            </div>
-            <div class="valign-wrapper caption-wrapper">
-            </div>
-
-            <div class="imgNavigatorLeft visible"></div>
-            <div class="imgNavigatorRight visible"></div>
-
-            <div id="maskBg"></div>
+    <!-- The album mask used to open up albums on the page -->    
+    <div id="mask">
+        <div class="valign-wrapper caption-top-wrapper">
         </div>
+        <div class="valign-wrapper image-wrapper">
+        </div>
+        <div class="valign-wrapper caption-bottom-wrapper">
+        </div>
+
+        <div class="imgNavigatorLeft visible"></div>
+        <div class="imgNavigatorRight visible"></div>
+
+        <div id="maskBg"></div>
+    </div>
+
+    <!-- Tool tip -->
+    <div class="tooltip none" id="DynamicTooltip" >
+    </div>    
+
 
     <!-- Side Navigation -->
     <div id="Header">
@@ -74,32 +74,6 @@
             <li class="party-nav"><i class="material-icons">contacts</i></li>
             <li class="rsvp-nav words">RSVP</li>
         </ul>
-
-        <!--  <nav>
-    <div class="nav-wrapper">
-      <a href="#home" class="brand-logo">JJ+D</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-		<li ><a href="#home" class="home-nav" >JJ+D</a></li>
-		<li ><a href="#story" class="story-nav" >Story</a></li>
-		<li ><a href="#party" class="party-nav" >Party</a></li>
-		<li ><a href="#info" class="info-nav" >Event Info</a></li>
-		<li ><a href="#lodging" class="lodging-nav" >Lodging</a></li>
-		<li ><a href="#food" class="food-nav" >Food</a></li>
-		<li ><a href="#gifts" class="gifts-nav" >Registry</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-		<li ><a href="#home" class="home-nav" >JJ+D</a></li>
-		<li ><a href="#story" class="story-nav" >Story</a></li>
-		<li ><a href="#party" class="party-nav" >Party</a></li>
-		<li ><a href="#info" class="info-nav" >Event Info</a></li>
-		<li ><a href="#lodging" class="lodging-nav" >Lodging</a></li>
-		<li ><a href="#food" class="food-nav" >Food</a></li>
-		<li ><a href="#gifts" class="gifts-nav" >Registry</a></li>
-      </ul>
-    </div>
-  </nav>
- -->
     </div>
     <!-- Home Frame -->
     <div id="home" class="home slide">
@@ -154,75 +128,82 @@
                     </div>
                 </div>
             </div>
-            <div class="storyInfo">
-                <div class="highlights story1 selected row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/1_small.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+            <div class="storyInfo flow-text-parent-small photo-album" data-album-index="1" data-theme="lovestory">
+                <div class="highlights story1 selected row photo" data-story="September, 2008" data-image="couple/8.jpg">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/8_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Here's something that's fun. In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. In your world you have total and absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story2 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/2.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/9_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5> on one  leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Here's something that's fun. In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. In your world you have total and absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story3 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/5.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/6_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Ds on one another  BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Here's something that's fun. In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. In your world you have total and absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story4 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/4.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/7_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Je another at a stude Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Herate anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story5 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/5.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/5_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little busrbage. In your world you have total and absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story6 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/1.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/1_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Here's something that's fun. absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story7 row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/2.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 row col l8 offset-l2">
+                        <div class="card-image col l4 ">
+                            <img src="img/couple/2_small.jpg" class="">
+                        </div>
+                        <div class="card-content flow-text col l8">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>We'll make some happy little bushes here. Here's something that's fun. In painting, you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home, the only thing I have power over is the garbage. In your world you have total and absolute power. Let's have a nice tree right here. You can create anything that makes you happy.</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -252,18 +233,19 @@
             </div>
             <div class="storyInfo">
                 <div class="highlights story1 selected row">
-                    <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/1.jpg">
-                    </div>
-                    <div class="imgTxt col m6 s8 ">
-                        <div class="flow-text">
+                    <div class="card z-depth-2 center valign">
+                        <div class="card-image">
+                            <img src="img/couple/1.jpg">
+                        </div>
+                        <div class="card-content flow-text">
                             <h4>September, 2008</h4>
-                            <h5>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</h5></div>
+                            <span>Jenny  Dustin first laid eyes on one another at a student leadership BBQ at Seattle Pacific University.  With the scent of lighter fluid in the air, the flames of attraction were instantaneous.  Unfortunately, Jenny would prove to be a tad…elusive…on the road to a dating relationship.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="highlights story2 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/2.jpg">
+                        <img src="img/couple/2.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -273,7 +255,7 @@
                 </div>
                 <div class="highlights story3 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/5.jpg">
+                        <img src="img/couple/5.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -283,7 +265,7 @@
                 </div>
                 <div class="highlights story4 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/4.jpg">
+                        <img src="img/couple/4.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -293,7 +275,7 @@
                 </div>
                 <div class="highlights story5 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/5.jpg">
+                        <img src="img/couple/5.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -303,7 +285,7 @@
                 </div>
                 <div class="highlights story6 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/1.jpg">
+                        <img src="img/couple/1.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -313,7 +295,7 @@
                 </div>
                 <div class="highlights story7 row">
                     <div class="imgBg col m2 offset-m2 s4">
-                        <img class="materialboxed" src="img/couple/2.jpg">
+                        <img src="img/couple/2.jpg">
                     </div>
                     <div class="imgTxt col m6 s8 ">
                         <div class="flow-text">
@@ -485,65 +467,65 @@
             <div class="h2">The people standing beside us!</div>
         </div>
         <div class="sectionBody valign-wrapper">
-            <div class="weddingPartyGroup valign">
+            <div class="weddingPartyGroup valign photo-album" data-album-index="0" data-theme="dapeeps">
                 <div class="officiant row">
                     <h2 class="wp-title col s12 m12 l2 m-center">Officiant</h2>
                     <div class="imgWrapper row col s12 m12 l2 offset-l3">
-                        <a class="img off tooltipped col s2 offset-s5 m2 offset-m5 l6 offset-l3" data-position="bottom" data-delay="50" data-tooltip="OFFICIANT : Ashley Koyala" rel="off-gallery" name="modal" data-image="ashley.jpg" title="Ashley Koyala"></a>
+                        <a class="img tooltip photo off col s2 offset-s5 m2 offset-m5 l4 offset-l3" data-story="OFFICIANT : Ashley Koyala" rel="off-gallery" data-image="profile/ashley.jpg" title="OFFICIANT: Ashley Koyala"></a>
                     </div>
                 </div>
                 <div class="bridesmaids row">
                      <h2 class="wp-title col s12 m12 l3 m-center">Bridesmaids</h2>
                      <div class="imgWrapper row col s12 m12 l1 ">
-                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12"  data-position="bottom" data-delay="50" data-tooltip="MAID OF HONOR : Emily Feldman" rel="girls-gallery" name="modal" data-image="Emily.jpg" title="MAID OF HONOR: Emily Feldman"></a>
+                        <a class="img tooltip photo one important col s2 offset-s5 m2 offset-m5 l12"  data-story="MAID OF HONOR : Emily Feldman" rel="girls-gallery" data-image="profile/Emily.jpg" title="MAID OF HONOR: Emily Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jacqueline Feldman" rel="girls-gallery"  name="modal" data-image="jacque.jpg" title="Jacqueline Feldman"></a>
+                        <a class="img tooltip photo two " data-story="Jacqueline Feldman" rel="girls-gallery"  data-image="profile/jacque.jpg" title="Jacqueline Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jennifer Tanzman" rel="girls-gallery"  name="modal" data-image="tanzman.jpg" title="Jennifer Tanzman"></a>
+                        <a class="img tooltip photo three " data-story="Jennifer Tanzman" rel="girls-gallery"  data-image="profile/tanzman.jpg" title="Jennifer Tanzman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="Jenny Whitlow" rel="girls-gallery"  name="modal" data-image="whitlow.jpg" title="Jenny Whitlow"></a>
+                        <a class="img tooltip photo four " data-story="Jenny Whitlow" rel="girls-gallery"  data-image="profile/whitlow.jpg" title="Jenny Whitlow"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nikole Ballard" rel="girls-gallery"  name="modal" data-image="nikole.jpg" title="Nikole Ballard"></a>
+                        <a class="img tooltip photo five " data-story="Nikole Ballard" rel="girls-gallery"  data-image="profile/nikole.jpg" title="Nikole Ballard"></a>
                     </div>
                     <div class="imgWrapper col m2 l1">
-                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Anne Davidson" rel="girls-gallery"  name="modal" data-image="anne.jpg" title="Anne Davidson"></a>
+                        <a class="img tooltip photo six " data-story="Anne Davidson" rel="girls-gallery"  data-image="profile/anne.jpg" title="Anne Davidson"></a>
                     </div>
                     <div class="imgWrapper col m1 l1"> 
-                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Makaela Wheeler Feldman" rel="girls-gallery"  name="modal" data-image="makay.jpg" title="Makaela Wheeler Feldman"></a>
+                        <a class="img tooltip photo seven " data-story="Makaela Wheeler Feldman" rel="girls-gallery"  data-image="profile/makay.jpg" title="Makaela Wheeler Feldman"></a>
                     </div>
                 </div>
                 <div class="groomsmen row">
                      <h2 class="wp-title col s12 m12 l3 m-center">Groomspeople</h2>
                      <div class="imgWrapper row col s12 m12 l1 ">
-                        <a class="img one important tooltipped col s2 offset-s5 m2 offset-m5 l12" data-position="bottom" data-delay="50" data-tooltip="BEST WOMAN : ELLY PRICE" rel="guys-gallery" data-image="elly.jpg" name="modal" title="BEST WOMAN: ELLY PRICE"></a>
+                        <a class="img tooltip photo one important  col s2 offset-s5 m2 offset-m5 l12" data-story="BEST WOMAN : ELLY PRICE" rel="guys-gallery" data-image="profile/elly.jpg" title="BEST WOMAN: ELLY PRICE"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Scott Moore" rel="guys-gallery" data-image="scott.jpg" name="modal" title="Scott Moore"></a>
+                        <a class="img tooltip photo two " data-story="Scott Moore" rel="guys-gallery" data-image="profile/scott.jpg" title="Scott Moore"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Aaron Rice" rel="guys-gallery" data-image="aaron.jpg" name="modal" title="Aaron Rice"></a>
+                        <a class="img tooltip photo three " data-story="Aaron Rice" rel="guys-gallery" data-image="profile/aaron.jpg" title="Aaron Rice"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img four tooltipped" data-position="bottom" data-delay="50" data-tooltip="David Feldman" rel="guys-gallery" data-image="david.jpg" name="modal" title="David Feldman"></a>
+                        <a class="img tooltip photo four " data-story="David Feldman" rel="guys-gallery" data-image="profile/david.jpg" title="David Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img five tooltipped" data-position="bottom" data-delay="50" data-tooltip="Bob Feldman" rel="guys-gallery" data-image="bob.jpg" name="modal" title="Bob Feldman"></a>
+                        <a class="img tooltip photo five " data-story="Bob Feldman" rel="guys-gallery" data-image="profile/bob.jpg" title="Bob Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img six tooltipped" data-position="bottom" data-delay="50" data-tooltip="Patrick Feldman" rel="guys-gallery" data-image="pat.jpg" name="modal" title="Patrick Feldman"></a>
+                        <a class="img tooltip photo six " data-story="Patrick Feldman" rel="guys-gallery" data-image="profile/pat.jpg" title="Patrick Feldman"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img two tooltipped" data-position="bottom" data-delay="50" data-tooltip="Kevin Strohmeyer" rel="guys-gallery" data-image="kevin.jpg" name="modal" title="Kevin Strohmeyer"></a>
+                        <a class="img tooltip photo two " data-story="Kevin Strohmeyer" rel="guys-gallery" data-image="profile/kevin.jpg" title="Kevin Strohmeyer"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img three tooltipped" data-position="bottom" data-delay="50" data-tooltip="Nic Ogle" rel="guys-gallery" data-image="nick.jpg" name="modal" title="Nic Ogle"></a>
+                        <a class="img tooltip photo three " data-story="Nic Ogle" rel="guys-gallery" data-image="profile/nick.jpg" title="Nic Ogle"></a>
                     </div>
                     <div class="imgWrapper col m2 l1 ">
-                        <a class="img seven tooltipped" data-position="bottom" data-delay="50" data-tooltip="Timothy Arthur" rel="guys-gallery" data-image="timothy.jpg" name="modal" title="Timothy Arthur"></a>
+                        <a class="img tooltip photo seven " data-story="Timothy Arthur" rel="guys-gallery" data-image="profile/timothy.jpg" title="Timothy Arthur"></a>
                     </div>
                 </div>
             </div>

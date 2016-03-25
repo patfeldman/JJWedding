@@ -1,36 +1,11 @@
 var Wedding = {};
-Wedding.peoplePhotoIndex = 0;
-Wedding.peoplePhotoList = {};
-Wedding.peopleTitleList = {};
+Wedding.photos = {};
+Wedding.currentAlbumIndex = 0;
 
 Wedding.Initialize = function(){
+    Wedding.$albumModal = $("#mask");
+    Wedding.$tooltip = $("#DynamicTooltip");
 
-    $allPeoplePhotos = $("#party").find(".weddingPartyGroup .imgWrapper a");
-    Wedding.peoplePhotoList = $allPeoplePhotos
-        .map(function() {
-            return $(this).attr("data-image");
-          }).get();
-    Wedding.peopleTitleList = $allPeoplePhotos
-        .map(function() {
-            return $(this).attr("data-tooltip");
-          }).get();
-
-	$(".button-collapse").sideNav({
-      menuWidth: 300, // Default is 240
-    });
-
-	$('.tooltipped').tooltip({delay: 70});
-
-    $("#next,#prev").click(function() {        
-        return Wedding.Scroll($(this).attr('id'));        
-    });
-
-    $(".scrolltoanchor").click(function() {
-        $.scrollTo($($(this).attr("href")), {
-            duration: 750
-        });
-        return false;
-    });
 
     $("ul#Navigation li, ul#NavigationSmall li").on("click", function(e){
     	var $target = $(e.target);
@@ -86,73 +61,132 @@ Wedding.Initialize = function(){
 		$stories.find(".story" + heartNum).addClass("selected");
 	});
 
+    //ToolTips
+    $('.tooltip').on("hover", function(){
 
-    $(".imgNavigatorLeft").on("click", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        Wedding.LoadPhoto(Wedding.peoplePhotoIndex-1);
-    });
-    $(".imgNavigatorRight").on("click", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        Wedding.LoadPhoto(Wedding.peoplePhotoIndex+1);
+
     });
 
-    //select all the a tag with name equal to modal
-    $('a[name=modal]').click(function(e) {
-        //Cancel the link behavior
-        e.preventDefault();
-        //transition effect     
-        $('#mask').fadeIn(300);   
-        $('#mask #maskBg').fadeTo("fast",0.8);  
-        var dataImage = $(this).attr('data-image');
-        var index = Wedding.peoplePhotoList.indexOf(dataImage);
-        Wedding.LoadPhoto(index);
-    });
-        
-    //if mask is clicked
-    $('#mask').click(function () {
-        $(this).hide();
-        $('.window').hide();
-    }); 
+    $(".tooltip").on("mouseover", Wedding.Hover_OpenTooltip);
+    $(".tooltip").on("mouseout", function(e){Wedding.$tooltip.addClass("none");});
+    // set up all albums on page
+    Wedding.Album_LoadAlbums();
+    Wedding.$albumModal.find(".imgNavigatorLeft").on("click", Wedding.Album_OnPrevClick);
+    Wedding.$albumModal.find(".imgNavigatorRight").on("click", Wedding.Album_OnNextClick);
+    //$('#story .photo-album').on("click", function);
+    Wedding.$albumModal.click(function () {$(this).hide();}); 
 
-    Wedding.$mask = $("#mask");
 
 };
 
 
-Wedding.LoadPhoto = function(index){
+Wedding.Hover_OpenTooltip = function (e){
+    $target = $(e.target);
+    if ($target.hasClass("noHover")) return;
+    var tooltip = $target.attr("title");
+    var $tooltipTextBox = $("<span />").addClass("tooltip").html(tooltip);
+    Wedding.$tooltip.html("").append($tooltipTextBox).removeClass("none");
+    var halfWidth = Wedding.$tooltip.width()/2;
+    var targetHalfWidth = $target.width()/2;
+    var offset = $target.offset();
+    var top = offset.top + 68;
+    var left = offset.left + targetHalfWidth - halfWidth;
+    Wedding.$tooltip.offset({top:top, left:left});
+};
+
+Wedding.Album_LoadAlbums = function(){
+    $('.photo-album').each(function(){
+        var $albumIndex = parseInt($(this).attr('data-album-index'));
+        var $allPeoplePhotos = $(this).find(".photo");
+        Wedding.photos[$albumIndex] = {};
+        Wedding.photos[$albumIndex].photoList = $allPeoplePhotos.map(function() {return $(this).attr("data-image");}).get();
+        Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {return $(this).attr("data-story");}).get();
+        Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {return $(this).attr("data-title");}).get();
+        Wedding.photos[$albumIndex].photoIndex = 0;
+    });
+};
+Wedding.Album_OnImageClick = function(e){
+    //Cancel the link behavior
+    e.preventDefault();
+    //transition effect     
+    Wedding.$albumModal.fadeIn(300);   
+    Wedding.$albumModal.find('#maskBg').fadeTo("fast",0.8);  
+    var dataImage = $(this).attr('data-image');
+    Wedding.currentAlbumIndex = parseInt($(this).closest('.photo-album').attr('data-album-index'));
+    Wedding.Album_SetPhotoIndex(Wedding.currentAlbumIndex, Wedding.photos[Wedding.currentAlbumIndex].photoList.indexOf(dataImage));
+    Wedding.Album_LoadPhoto(Wedding.currentAlbumIndex);
+};
+
+Wedding.Album_OnNextClick = function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    Wedding.Album_NextPhoto(Wedding.currentAlbumIndex);
+
+};
+Wedding.Album_OnPrevClick = function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    Wedding.Album_PreviousPhoto(Wedding.currentAlbumIndex);
+};
+Wedding.Album_UpdateArrows = function(albumIndex){
+    var photoIndex = Wedding.photos[albumIndex].photoIndex;
+    var albumLength = Wedding.photos[albumIndex]
+    if (photoIndex === 0){
+        Wedding.$albumModal.find(".imgNavigatorLeft").addClass("none");
+    } else {
+        Wedding.$albumModal.find(".imgNavigatorLeft").removeClass("none");
+    }
+    if (photoIndex >= (albumLength - 1)){
+        Wedding.$albumModal.find(".imgNavigatorRight").addClass("none");
+    } else {
+        Wedding.$albumModal.find(".imgNavigatorRight").removeClass("none");            
+    }
+};
+
+Wedding.Album_NextPhoto = function(albumIndex){
+    Wedding.Album_SetPhotoIndex (albumIndex, Wedding.photos[albumIndex].photoIndex+1);
+    Wedding.Album_LoadPhoto(albumIndex);
+};
+Wedding.Album_PreviousPhoto = function(albumIndex){
+    Wedding.Album_SetPhotoIndex (albumIndex, Wedding.photos[albumIndex].photoIndex-1);
+    Wedding.Album_LoadPhoto(albumIndex);
+};
+Wedding.Album_SetPhotoIndex = function(albumIndex, photoIndex){
+    if (photoIndex < 0) photoIndex = 0;
+    if (photoIndex >= Wedding.photos[albumIndex].photoList.length) photoIndex = Wedding.photos[albumIndex].photoList.length;
+    Wedding.photos[albumIndex].photoIndex = photoIndex;
+};
+
+Wedding.Album_LoadPhoto = function(albumIndex){
         //Get the A tag
-        var $imageWrapper = Wedding.$mask.find(".image-wrapper");
-        var $captionWrapper = Wedding.$mask.find(".caption-wrapper");
+        var $imageWrapper = Wedding.$albumModal.find(".image-wrapper");
+        var $captionWrapper = Wedding.$albumModal.find(".caption-bottom-wrapper");
+        var $captionTopWrapper = Wedding.$albumModal.find(".caption-top-wrapper");
         $imageWrapper.html("");
         $captionWrapper.html("");
+        $captionTopWrapper.removeClass("none").html("");
 
-        Wedding.peoplePhotoIndex = index;
-        var image_url = "img/profile/" + Wedding.peoplePhotoList[index];
-        var name = Wedding.peopleTitleList[index];
-        
+        var photoIndex = Wedding.photos[albumIndex].photoIndex;
+        if (Wedding.photos[albumIndex].titleList.length > 0){
+            var title = Wedding.photos[albumIndex].titleList[photoIndex];
+            var $title  = $('<div/>').addClass("caption").addClass("valign").html(title);
+            $captionTopWrapper.append($title);
+        } else {
+            $captionTopWrapper.addClass("none");
+        }
         // create <img>-element on the fly, as you might not need it beforehand
+        var image_url = "img/" + Wedding.photos[albumIndex].photoList[photoIndex];
         var $image = $('<img/>', { src: image_url });
         $image.addClass('personImage').addClass('valign');
+        $image.fadeIn(500);
         // append it as a child to another element
         $imageWrapper.append($image);
 
-        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(name);
+        var story = Wedding.photos[albumIndex].storyList[photoIndex];
+        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
         $captionWrapper.append($caption);
-        //transition effect
-        $image.fadeIn(1000); 
 
-        if (index === 0){
-            $("#mask .imgNavigatorLeft").addClass("none");
-        } else {
-            $("#mask .imgNavigatorLeft").removeClass("none");
-        }
-        if (index === (Wedding.peoplePhotoList.length - 1)){
-            $("#mask .imgNavigatorRight").addClass("none");
-        } else {
-            $("#mask .imgNavigatorRight").removeClass("none");            
-        }
+        Wedding.Album_UpdateArrows(albumIndex);
 };
 
 Wedding.AnimateRight = function(){};
