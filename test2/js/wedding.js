@@ -73,6 +73,7 @@ Wedding.Initialize = function(){
     Wedding.Album_LoadAlbums();
     Wedding.$albumModal.find(".imgNavigatorLeft").on("click", Wedding.Album_OnPrevClick);
     Wedding.$albumModal.find(".imgNavigatorRight").on("click", Wedding.Album_OnNextClick);
+    $('.photo-album .photo').on("click", Wedding.Album_OnImageClick);
     //$('#story .photo-album').on("click", function);
     Wedding.$albumModal.click(function () {$(this).hide();}); 
 
