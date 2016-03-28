@@ -77,8 +77,36 @@ Wedding.Initialize = function(){
     //$('#story .photo-album').on("click", function);
     Wedding.$albumModal.click(function () {$(this).hide();}); 
 
-
+    $("#rsvp").find("form").on( "submit", Wedding.Submit_weddingRsvp);
 };
+
+Wedding.Submit_weddingRsvp = function(e) {
+    e.preventDefault();
+    data = '{}';
+    var $fName = $( "#first_name" ),
+    $lName = $( "#last_name" ),
+    $email=$("#email"),
+    $numGuests=$("#numguests"),
+    $campFri=$("#campFri"),
+    $campSat=$("#campSat"),
+    $building = $("#buildingBox"),
+    $teamName = $("#team_name"),
+    allFields = $( [] ).add($fName).add($lName).add($email).add($numGuests).add($campFri).add($campSat).add($building).add($teamName);
+
+    $.ajax({
+        type: "POST",
+        url: 'api/weddingRsvp.php',
+        data: allFields.serialize(),
+        success: function(data){
+            $("#rsvp form").addClass("none");
+            $("#ThankYouNote").removeClass("none");
+        },
+        error:function(data){
+            alert("Error on the page, try again later please!");
+        },
+        dataType: 'json'
+    });
+}
 
 
 Wedding.Hover_OpenTooltip = function (e){
