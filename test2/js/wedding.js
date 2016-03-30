@@ -73,7 +73,7 @@ Wedding.Initialize = function(){
     Wedding.Album_LoadAlbums();
     Wedding.$albumModal.find(".imgNavigatorLeft").on("click", Wedding.Album_OnPrevClick);
     Wedding.$albumModal.find(".imgNavigatorRight").on("click", Wedding.Album_OnNextClick);
-    $('.photo-album .photo').on("click", Wedding.Album_OnImageClick);
+    $('.photo-album').on("click", Wedding.Album_OnImageClick);
     //$('#story .photo-album').on("click", function);
     Wedding.$albumModal.click(function () {$(this).hide();}); 
 
@@ -101,21 +101,39 @@ Wedding.Album_LoadAlbums = function(){
         var $allPeoplePhotos = $(this).find(".photo");
         Wedding.photos[$albumIndex] = {};
         Wedding.photos[$albumIndex].photoList = $allPeoplePhotos.map(function() {return $(this).attr("data-image");}).get();
-        Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {return $(this).attr("data-story");}).get();
-        Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {return $(this).attr("data-title");}).get();
+        Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {
+            if (this.hasAttribute("data-story")){
+                return $(this).attr("data-story");
+            }else {
+                return $(this).find(".data-story").html();
+            }
+        }).get();
+        Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {
+            if (this.hasAttribute("data-title")){
+                return $(this).attr("data-title");
+            }else {
+                return $(this).find(".data-title").html();
+            }
+        }).get();
         Wedding.photos[$albumIndex].photoIndex = 0;
+        let theme = (this.hasAttribute("data-theme")) ? $(this).attr("data-theme") : "normal";
+        Wedding.photos[$albumIndex].photoTheme = theme;
     });
 };
 Wedding.Album_OnImageClick = function(e){
     //Cancel the link behavior
     e.preventDefault();
+    $target = $(e.target);
+    if (!$target.hasClass("photo")) $target = $target.closest(".photo");
+
     //transition effect     
     Wedding.$albumModal.fadeIn(300);   
     Wedding.$albumModal.find('#maskBg').fadeTo("fast",0.8);  
-    var dataImage = $(this).attr('data-image');
-    Wedding.currentAlbumIndex = parseInt($(this).closest('.photo-album').attr('data-album-index'));
+    var dataImage = $target.attr('data-image');
+    Wedding.currentAlbumIndex = parseInt($target.closest('.photo-album').attr('data-album-index'));
     Wedding.Album_SetPhotoIndex(Wedding.currentAlbumIndex, Wedding.photos[Wedding.currentAlbumIndex].photoList.indexOf(dataImage));
     Wedding.Album_LoadPhoto(Wedding.currentAlbumIndex);
+    Wedding.$albumModal.removeClass().addClass("flow-text-parent-xsmall").addClass(Wedding.photos[Wedding.currentAlbumIndex].photoTheme);
 };
 
 Wedding.Album_OnNextClick = function(e){
@@ -131,7 +149,7 @@ Wedding.Album_OnPrevClick = function(e){
 };
 Wedding.Album_UpdateArrows = function(albumIndex){
     var photoIndex = Wedding.photos[albumIndex].photoIndex;
-    var albumLength = Wedding.photos[albumIndex]
+    var albumLength = Wedding.photos[albumIndex].photoList.length;
     if (photoIndex === 0){
         Wedding.$albumModal.find(".imgNavigatorLeft").addClass("none");
     } else {
