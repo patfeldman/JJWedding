@@ -1040,7 +1040,8 @@ img.partyImg {
 .hearts .highlight:hover {}
 
 .highlights:not(.selected) {
-    display: none;
+    /* display: none; */
+    z-index: -10000;
 }
 
 .highlights img {/* width: 100%; */}
