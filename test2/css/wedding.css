@@ -775,8 +775,8 @@ img.img {
     /* background-color: #FC7C7C; */
     white-space: nowrap;
     text-align: center;
-    top: 50%;
-    margin-top: -35px;
+    bottom: 0;
+    /* margin-top: -35px; */
     border: white 1px solid;
     border-radius: 100px;
 }
@@ -844,11 +844,11 @@ img.img {
 
 .navBarRight {
     background-image: url(../img/next-right.png);
-    background-position: center;
     background-repeat: no-repeat;
     background-color: #fc7c7c;
     background-size: 37px;
     cursor: pointer;
+    background-position: center;
 }
 
 .navBarLeft:hover {
@@ -1716,7 +1716,7 @@ div#info {
 
 #li {}
 
-#lodgingÂ .card-desc ul li {
+#lodgingÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
