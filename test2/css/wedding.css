@@ -2018,6 +2018,9 @@ span.newSectionTitle {
 .flow-text-parent-xsmall{
     font-size: 10px;
 }
+.flow-text-parent-xxsmall{
+    font-size: 8px;
+}
 
 @media only screen and (max-width: 360px) {
     .flow-text {
