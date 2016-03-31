@@ -159,7 +159,7 @@ Wedding.Album_OnPrevClick = function(e){
 };
 Wedding.Album_UpdateArrows = function(albumIndex){
     var photoIndex = Wedding.photos[albumIndex].photoIndex;
-    var albumLength = Wedding.photos[albumIndex]
+    var albumLength = Wedding.photos[albumIndex].photoList.length;
     if (photoIndex === 0){
         Wedding.$albumModal.find(".imgNavigatorLeft").addClass("none");
     } else {
