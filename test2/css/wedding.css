@@ -838,7 +838,7 @@ img.img {
     background-image: url(../img/next-left.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #ABDDC6;
+    background-color: #4D9674;
     cursor: pointer;
 }
 
@@ -1710,13 +1710,13 @@ div#info {
 
 #lodging .detail {
     /* padding-bottom: .5em; */
-    /* overflow: hidden; */
-    /* white-space: nowrap; */
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #li {}
 
-#lodgingÃ‚Â .card-desc ul li {
+#lodgingÃƒâ€šÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
@@ -1742,8 +1742,8 @@ div#info {
 }
 
 .slide .note {
-    font-family: Open Sans;
-    font-weight: 100;
+    font-family: Open Sans Condensed;
+    font-weight: 600;
     font-size: .8em;
 }
 
@@ -1770,7 +1770,7 @@ div#info {
 
 #food .descCard ul li {
     font-family: Open Sans;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -2009,6 +2009,9 @@ div#rsvp {
     padding-bottom: 35px;
 }
 
+ul.no-gutter{
+    margin-top: .5em;
+}
 
 @media only screen and (min-width: 600px) {
     #info .sectionBody.valign-wrapper {
@@ -2137,7 +2140,7 @@ div#rsvp {
 
 @media only screen and (max-width: 360px) {
     .flow-text {
-        font-size:1.2em !important;
+        font-size:1.1em !important;
     }
 }
 
@@ -2235,4 +2238,31 @@ div#rsvp {
     .flow-text {
         font-size:1.584em !important;
     }
+}
+
+
+#lodging a.noWrap {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+ul.no-gutter li {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+@keyframes blinking
+{
+    from {text-shadow: 1px 0px 20px #E15661;}
+    to {text-shadow :  1px 0px 2px #E15661;;}
+}
+
+.fun-font {
+    font-size: 1.8em !important;
+    font-family: Diplomata !important;
+    color: #FFFFFF !important;
+    line-height: 38px;
+    text-shadow :  1px 0px 2px #E15661;
+    animation: blinking .6s 98765432;
 }
