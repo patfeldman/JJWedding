@@ -158,7 +158,7 @@
                         </div>
                         <div class="card-content col l8 m7 s12 valign">
                             <h4 class="data-title">Fun Times</h4>
-                            <span class="data-story flow-text ">Then one day, it happened. SEX, but since I don't have a picture of that, you'll have to use your imagination. </span>
+                            <span class="data-story flow-text ">Then one day, it happened. SEX, but you'll have to use your imagination for that. </span>
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@
         </div>
         <div class="sectionBody valign-wrapper">
             <div class="cardRow row valign">
-                <div class="col l4 offset-l1 m8 offset-m2 s12 valign-wrapper descCardWrapper">
+                <div class="col l5 offset-l1 m8 offset-m2 s12 valign-wrapper descCardWrapper">
                     <div class="card z-depth-2 descCard center valign">
                         <div class="card-content">
                             <div class="card-title">HOTELS</div>
@@ -440,7 +440,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l4 offset-l2 m8 offset-m2 s12 valign-wrapper descCardWrapper">
+                <div class="col l5 m8 offset-m2 s12 valign-wrapper descCardWrapper">
                     <div class="card z-depth-2 descCard center valign">
                         <div class="card-content">
                             <div class="card-title">CAMPING</div>
@@ -448,7 +448,7 @@
                                 <ul>
                                     <li class="center title">Camping at the Cove is available</li>
                                     <li class = "center detail">Reserve space in the RSVP below</li>
-                                    <li class = "center note bottom">For more info please contact <a href="mailto:alpacasarecamels@gmail.com?Subject=Camping Question" target="_top">Jenny and Dustin</a></li>
+                                    <li class = "center note bottom">For more info please contact <a class="smallFont redNote" href="mailto:alpacasarecamels@gmail.com?Subject=Camping Question" target="_top">Jenny and Dustin</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -583,40 +583,31 @@
         <div class="sectionBody valign-wrapper">
             <div class="weddingPartyGroup valign">
                 <div class="row">
-                    <form name="rsvp-now" class="rsvp-now card z-depth-5" action="send.php" method="post" onsubmit="window.open('','my_form_target', 'width=300,height=120', true); this.target='my_form_target';">
+                    <div class="none" id="ThankYouNote">
+                        <div > You have successfully RSVP'd.</div>
+                        <div> Thank you. See you soon!</div>
+                    </div>
+                    <form class="rsvp-now card z-depth-5">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="first_name" type="text" class="validate">
+                                <input id="first_name" name="first_name" type="text" class="validate">
                                 <label for="first_name">First Name</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
+                                <input id="last_name" name="last_name" type="text" class="validate">
                                 <label for="last_name">Last Name</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" name="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="numguests" type="number" class="validate">
+                                <input id="numguests" name="numguests" type="number" class="validate">
                                 <label for="numguests">Number of Guests</label>
-                            </div>
-                        </div>
-                        <div class="row newSection">
-                            <span class="newSectionTitle">Are you Camping?</span>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6 center">
-                                <input type="checkbox" id="campFri" />
-                                <label for="campFri">Friday Night</label>
-                            </div>
-                            <div class="input-field col s6 center">
-                                <input type="checkbox" id="campSat" />
-                                <label for="campSat">Saturday Night</label>
                             </div>
                         </div>
                         <div class="row newSection withBorder">
@@ -624,21 +615,33 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s6 center">
-                                <input type="checkbox" id="buildingBox" />
+                                <input type="checkbox" id="buildingBox" name="buildingBox" />
                                 <label for="buildingBox">Yes, Please</label>
                             </div>
                             <div class="input-field col s6 center">
-                                <input id="team_name" type="text" class="validate">
+                                <input id="team_name" name="team_name" type="text" class="validate">
                                 <label for="team_name">Team Name</label>
                             </div>
                         </div>
-
+                        <div class="row newSection">
+                            <span class="newSectionTitle">Are you Camping?</span>
+                        </div>
+                        <div class="row xlargeBottom">
+                            <div class="input-field col s6 center">
+                                <input type="checkbox" id="campFri" name="campFri" />
+                                <label for="campFri">Friday Night</label>
+                            </div>
+                            <div class="input-field col s6 center">
+                                <input type="checkbox" id="campSat" name="campSat" />
+                                <label for="campSat">Saturday Night</label>
+                            </div>
+                        </div>
                         <div class="submit">
                             <input class="submit-btn" type="submit" name='submit' value="submit" />
                         </div>
                     </form>
                 </div>
-                <h3 class="questions">For Questions Email: <a href="mailto:JennyplusDustin@gmail.com">JennyplusDustin@gmail.com</a></h3>
+                <h3 class="questions">For Questions Email: <a class="smallFont " href="mailto:alpacasarecamels@gmail.com?Subject=Camping Question" target="_top">Jenny and Dustin</a></h3>
             </div>
         </div>
     </div>

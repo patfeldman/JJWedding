@@ -1897,6 +1897,119 @@ span.newSectionTitle {
 
 
 
+img.personImage {
+    margin: auto;
+    max-width: 80%;
+    max-height: 90%;
+    z-index: 10000;
+    border-radius: 50px;
+    border: 9px solid #989898;
+}
+
+.caption {
+    color: #333333;
+    font-family: Poller one;
+    font-weight: 700;
+    border: 5px solid #989898;
+    border-radius: 13px;
+    font-weight: 900;
+    padding: 9px;
+    background-color: #D6D6D6;
+    margin: auto;
+    min-width: 300px;
+    text-shadow: 2px 2px 3px #fff;
+}
+
+.caption-bottom-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    z-index: 10001;
+    bottom: 20px;
+}
+.caption-top-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    position: fixed;
+    z-index: 10001;
+    top: 20px;
+}
+
+#rsvp .newSection {
+    border-top: 1px solid #EFEFEF;
+    padding-top: 15px;
+    text-align: center;
+    margin: 0;
+    font-family: Open Sans Condensed;
+    font-weight: 600;
+    color: #9E9E9E;
+    margin-top: 6px;
+}
+
+span.newSectionTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.input-field.col.s6 {
+    /* text-align: center; */
+}
+
+#rsvp .row {
+    margin-bottom: 5px;
+}
+
+#rsvp .withBorder {
+    /* margin-top: 40px; */
+}
+
+.card-image {
+}
+
+#story img {border-radius: 10px;}
+
+#story .card-image {padding: 0;margin: 0;}
+
+#story .card-image:after {
+    clear: both;
+    /* display: table; */
+    /* content: ""; */
+}
+
+#story .card {
+    padding-left: 0;
+}
+
+#story .card-content span {
+    color: #E15661;
+}
+
+div#ThankYouNote {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: Poller One;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    border: double 3px black;
+}
+
+div#rsvp {
+    min-height: 1000px;
+}
+
+.xlargeBottom {
+}
+
+.xlargeBottom {
+    padding-bottom: 35px;
+}
+
+
 @media only screen and (min-width: 600px) {
     #info .sectionBody.valign-wrapper {
         /* height: 90%; */
