@@ -1716,7 +1716,7 @@ div#info {
 
 #li {}
 
-#lodgingÃƒâ€šÃ‚Â .card-desc ul li {
+#lodging .card-desc ul li {
     padding-left: 10px;
 }
 
@@ -1873,7 +1873,13 @@ span.newSectionTitle {
 
 #mask.hifstory .caption-bottom-wrapper .caption {
     font-family: Open Sans;
-    font-weight: 100;
+    font-weight: 800;
+    background-color: rgba(240,248,255,.6);
+    font-size: 1.1em;
+    border-width: 1px;
+    margin: 0 2em;
+    border-color: black;
+    box-shadow: 0px 0px 4px 4px white;
 }
 
 #story h4 {
@@ -1914,7 +1920,6 @@ img.personImage {
     border-radius: 13px;
     font-weight: 900;
     padding: 9px;
-    background-color: #D6D6D6;
     margin: auto;
     min-width: 300px;
     text-shadow: 2px 2px 3px #fff;
