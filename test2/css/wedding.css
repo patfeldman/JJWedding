@@ -1871,7 +1871,8 @@ span.newSectionTitle {
 }
 
 
-#mask.hifstory .caption-bottom-wrapper .caption {
+#mask.hifstory .caption-bottom-wrapper .caption,
+#mask.lovestory .caption-bottom-wrapper .caption {
     font-family: Open Sans;
     font-weight: 800;
     background-color: rgba(240,248,255,.6);
@@ -2023,7 +2024,7 @@ ul.no-gutter{
         /* height: 90%; */
     }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 990px) {
     .home-img .h1 {
         font-size: 43px;
         line-height: 58px;
@@ -2047,15 +2048,15 @@ ul.no-gutter{
         width: 80vw;
     }
     #info {
-        min-height: 1200px;
+         min-height: 1200px; 
     }
     #party {
-        min-height: 1300px;
+         min-height: 1300px; 
     }
     #food,
     #lodging,
     #rsvp {
-        min-height: 1100px;
+         min-height: 1100px; 
     }
 
 
