@@ -144,7 +144,7 @@ Wedding.Album_LoadAlbums = function(){
             }
         }).get();
         Wedding.photos[$albumIndex].photoIndex = 0;
-        let theme = (this.hasAttribute("data-theme")) ? $(this).attr("data-theme") : "normal";
+        var theme = (this.hasAttribute("data-theme")) ? $(this).attr("data-theme") : "normal";
         Wedding.photos[$albumIndex].photoTheme = theme;
     });
 };
