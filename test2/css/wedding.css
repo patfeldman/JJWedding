@@ -29,7 +29,7 @@ h3 {
 
 h4 {
     font-family: 'Open Sans', arial;
-    color: rgb(225, 86, 97);
+    color: #E15661;
 }
 
 p {
@@ -1860,15 +1860,15 @@ span.newSectionTitle {
 }
 
 #story .card {
-    padding-left: 0;
+    /* padding-left: 0; */
     /* height: 100%; */
     cursor: pointer;
 }
 
 #story .card-content span {
     color: #9E7C7E;
-    font-family: Open Sans condensed;
-    font-weight: 600;
+    font-family: Open Sans;
+    font-weight: 100;
     max-height: 209px;
     overflow: scroll;
 }
@@ -1886,9 +1886,13 @@ span.newSectionTitle {
     box-shadow: 0px 0px 4px 4px white;
 }
 
-#story h4 {
+#story .data-title, 
+#story h4 .data-title, 
+#story h4 .herStory, 
+#story h4 .hisStory 
+{
     font-size: 1.6rem;
-    color: #585858;
+    color: #E15661;
     text-shadow: 2px 2px 2px #DCD4C4;
     font-family: Poller One;
 }
@@ -1977,7 +1981,7 @@ span.newSectionTitle {
 .card-image {
 }
 
-#story img {border-radius: 10px;}
+#story img {border-radius: 4px;/* border: 1px solid #0C0C0C; */box-shadow: 0px 0px 6px 4px #7B3135;}
 
 #story .card-image {padding: 0;margin: 0;}
 
@@ -1988,11 +1992,12 @@ span.newSectionTitle {
 }
 
 #story .card {
-    padding-left: 0;
+    /* padding-left: 0; */
+    padding: 16px;
 }
 
 #story .card-content span {
-    color: #E15661;
+    color: #585858;
 }
 
 div#ThankYouNote {
@@ -2276,6 +2281,11 @@ ul.no-gutter li {
     animation: blinking .6s 98765432;
 }
 
+#story .floater {
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
 ul#Navigation li {
     margin: 2%;
 }
