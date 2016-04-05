@@ -61,6 +61,26 @@ Wedding.Initialize = function(){
 		$stories.find(".story" + heartNum).addClass("selected");
 	});
 
+    $("#ChoiceSelector").on("click", function(e){
+        e.stopPropagation();
+        var $target = $(e.target);
+
+        if ($target.attr('id') === 'UnSelectedStory'){
+            if ($target.hasClass('him')){
+                $("#SelectedStory").removeClass("her").addClass("him");
+                $("#UnSelectedStory").removeClass("him").addClass("her");
+                $("#story .herStoryText").addClass("none");
+                $("#story .hisStoryText").removeClass("none");
+            } else {
+                $("#UnSelectedStory").removeClass("her").addClass("him");
+                $("#SelectedStory").removeClass("him").addClass("her");
+                $("#story .herStoryText").removeClass("none");
+                $("#story .hisStoryText").addClass("none");
+            }
+            $('.fixed-action-btn').closeFAB();
+        }  
+    });
+
     //ToolTips
     $('.tooltip').on("hover", function(){
 
@@ -127,15 +147,19 @@ Wedding.Album_LoadAlbums = function(){
     $('.photo-album').each(function(){
         var $albumIndex = parseInt($(this).attr('data-album-index'));
         var $allPeoplePhotos = $(this).find(".photo");
+        var showStory = !this.hasAttribute("data-no-story");
         Wedding.photos[$albumIndex] = {};
         Wedding.photos[$albumIndex].photoList = $allPeoplePhotos.map(function() {return $(this).attr("data-image");}).get();
-        Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {
-            if (this.hasAttribute("data-story")){
-                return $(this).attr("data-story");
-            }else {
-                return $(this).find(".data-story").html();
-            }
-        }).get();
+        if (showStory){
+            Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {
+                    if (this.hasAttribute("data-story")){
+                        return $(this).attr("data-story");
+                    }else {
+                        return $(this).find(".data-story").html();
+                    }
+            }).get();
+            
+        }
         Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {
             if (this.hasAttribute("data-title")){
                 return $(this).attr("data-title");

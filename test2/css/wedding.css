@@ -103,7 +103,7 @@ body {
     filter: alpha(opacity=70);
     /* CSS3 standard */
     opacity: 0.7;
-    z-index: 1;
+    z-index: 1000;
 }
 
 ul#Navigation,
@@ -166,6 +166,7 @@ ul#NavigationSmall li {
     overflow: hidden;
     border: 6px double #DA585F;
     /* margin-top: 40px; */
+    min-height: 850px;
 }
 
 .story .content-box,
@@ -1895,6 +1896,7 @@ span.newSectionTitle {
     color: #E15661;
     text-shadow: 2px 2px 2px #DCD4C4;
     font-family: Poller One;
+    padding-bottom: 18px;
 }
 
 #story .card .card-content {
@@ -1977,6 +1979,8 @@ span.newSectionTitle {
 #rsvp .withBorder {
     /* margin-top: 40px; */
 }
+
+.hisHerWrap{position: absolute;display: inline-block;}
 
 .card-image {
 }
@@ -2288,4 +2292,35 @@ ul.no-gutter li {
 }
 ul#Navigation li {
     margin: 2%;
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+a.imgChoice {
+    background-size: cover;
+    width: 100%;
+    background-image: url(../img/him.png);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+
+
+
+a.her {
+    background-image: url(../img/her.png);
+    background-color: white;
+}
+a.him {
+    background-image: url(../img/him.png);
+    background-color: white;
+    background-size: contain;
+}
+
+#story span.data-story {
+    margin-top: 25px;
 }
