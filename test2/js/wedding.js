@@ -155,8 +155,9 @@ Wedding.Album_LoadAlbums = function(){
                     }else {
                         return $(this).find(".data-story").html();
                     }
-            }).get();
-            
+            }).get();  
+        } else {
+            Wedding.photos[$albumIndex].storyList = [];
         }
         Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {
             if (this.hasAttribute("data-title")){
@@ -251,9 +252,13 @@ Wedding.Album_LoadPhoto = function(albumIndex){
         // append it as a child to another element
         $imageWrapper.append($image);
 
-        var story = Wedding.photos[albumIndex].storyList[photoIndex];
-        var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
-        $captionWrapper.append($caption);
+        if (Wedding.photos[albumIndex].storyList.length > 0){
+            var story = Wedding.photos[albumIndex].storyList[photoIndex];
+            var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
+            $captionWrapper.append($caption);
+        } else {
+            $captionWrapper.addClass("none");
+        }
 
         Wedding.Album_UpdateArrows(albumIndex);
 };

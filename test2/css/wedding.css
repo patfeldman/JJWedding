@@ -1524,6 +1524,7 @@ a.location:hover {
 
 #party .important{
     border: 5px #4A4A4A double;
+    min-width: 60px;
 }
 
 #DynamicTooltip {
@@ -1720,7 +1721,7 @@ div#info {
 
 #li {}
 
-#lodgingÃƒâ€šÃ‚Â .card-desc ul li {
+#lodgingÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
