@@ -65,20 +65,18 @@ Wedding.Initialize = function(){
         e.stopPropagation();
         var $target = $(e.target);
 
-        if ($target.attr('id') === 'UnSelectedStory'){
-            if ($target.hasClass('him')){
-                $("#SelectedStory").removeClass("her").addClass("him");
-                $("#UnSelectedStory").removeClass("him").addClass("her");
-                $("#story .herStoryText").addClass("none");
-                $("#story .hisStoryText").removeClass("none");
-            } else {
-                $("#UnSelectedStory").removeClass("her").addClass("him");
-                $("#SelectedStory").removeClass("him").addClass("her");
-                $("#story .herStoryText").removeClass("none");
-                $("#story .hisStoryText").addClass("none");
+        if ($target.hasClass("imgChooserImg")){
+            if (!$target.parent().hasClass("imgSelected")){
+                if ($target.hasClass("herStory")){
+                    $("#story .hisStoryText").addClass("none");
+                    $("#story .herStoryText").removeClass("none");
+                } else {
+                    $("#story .herStoryText").addClass("none");
+                    $("#story .hisStoryText").removeClass("none");
+                }
+                $target.closest("#ChoiceSelector").find(".imgChooser").toggleClass("imgSelected");
             }
-            $('.fixed-action-btn').closeFAB();
-        }  
+        }
     });
 
     //ToolTips

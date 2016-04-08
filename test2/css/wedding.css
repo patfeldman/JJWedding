@@ -166,7 +166,7 @@ ul#NavigationSmall li {
     overflow: hidden;
     border: 6px double #DA585F;
     /* margin-top: 40px; */
-    min-height: 850px;
+    min-height: 1050px;
 }
 
 .story .content-box,
@@ -1564,7 +1564,7 @@ a.location:hover {
 }
 
 @keyframes runluigi {
-	from { background-position:    0px; }
+    from { background-position:    0px; }
     to { background-position: -150px; }
  }
 
@@ -1584,7 +1584,7 @@ a.location:hover {
 }
 
 @keyframes wait {
-	from { background-position:    0px; }
+    from { background-position:    0px; }
     to { background-position: -80px; }
  }
 
@@ -1622,7 +1622,7 @@ a.location:hover {
 }
 
 @keyframes runwolverine {
-	from { background-position:    0px; }
+    from { background-position:    0px; }
     to { background-position: -326px; }
  }
 
@@ -1720,7 +1720,7 @@ div#info {
 
 #li {}
 
-#lodgingÂ .card-desc ul li {
+#lodgingÃƒâ€šÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
@@ -1850,7 +1850,7 @@ span.newSectionTitle {
 .card-image {
 }
 
-#story img {border-radius: 10px;max-width: 250px;}
+#story img {border-radius: 10px;max-width: 250px;width: 30vw;min-width: 120px;}
 
 #story .card-image {padding: 0;margin: 0;}
 
@@ -1985,7 +1985,7 @@ span.newSectionTitle {
 .card-image {
 }
 
-#story img {border-radius: 4px;/* border: 1px solid #0C0C0C; */box-shadow: 0px 0px 6px 4px #7B3135;}
+#story img {border-radius: 4px;/* border: 1px solid #0C0C0C; */box-shadow: 0px 0px 12px 1px #FF9197;}
 
 #story .card-image {padding: 0;margin: 0;}
 
@@ -2096,7 +2096,7 @@ ul.no-gutter{
         min-height: 1100px;
     }
     #story {
-        min-height: 800px;
+        min-height: 1200px;
     }
     #party {
         min-height: 1200px;
@@ -2296,8 +2296,8 @@ ul#Navigation li {
 
 .relative {
     position: relative;
-    width: 100%;
-    height: 30px;
+    /* width: 100%; */
+    height: 20px;
 }
 
 a.imgChoice {
@@ -2313,14 +2313,76 @@ a.imgChoice {
 
 a.her {
     background-image: url(../img/her.png);
-    background-color: white;
+    background-color: #ABDDC6;
+    line-height: 40px;
 }
 a.him {
     background-image: url(../img/him.png);
-    background-color: white;
+    background-color: #ABDDC6;
     background-size: contain;
 }
 
 #story span.data-story {
     margin-top: 25px;
+}
+
+#story .card-image h3 {}
+
+#story .card h3 {
+    color: #DA585F;
+    font-family: poller one;
+    font-size: 1.1em;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: -23px;
+}
+
+
+
+.btn-floating:hover {
+    background-color: white;
+}
+
+#story a.imgChooser img {
+    border: none;
+    border-radius: 23px;
+    width: 35px;
+    height: 35px;
+    min-width: 30px;
+    background-color: #FFFFFF;
+    /* border: black 1px solid; */
+    box-shadow: 1px 1px 8px 1px #B1B1B1;
+    margin: 6px;
+    padding: 2px;
+}
+
+#story .choice {
+    z-index: 10000000000;
+}
+
+#story a.imgChooser {
+    display: inline-block;
+}
+
+
+#story a.imgChooser:hover img.imgChooserImg {
+    box-shadow: none;
+    background-color: #ABDDC6;
+}
+
+#story .choice {
+    margin-top: -16px;
+    margin-bottom: 10px;
+}
+
+#story a.imgChooser.imgSelected img {
+    background-color: #ABDDC6;
+    width: 45px;
+    height: 45px;
+}
+
+@media only screen and (min-width: 570px){
+    #story .data-story span {
+        font-size: 1.144rem;
+    }
 }
