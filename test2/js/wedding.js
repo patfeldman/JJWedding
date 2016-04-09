@@ -70,9 +70,11 @@ Wedding.Initialize = function(){
                 if ($target.hasClass("herStory")){
                     $("#story .hisStoryText").addClass("none");
                     $("#story .herStoryText").removeClass("none");
+                    $target.closest(".card").find(".card-image img").attr("src", "img/couple/dress_small.jpg")
                 } else {
                     $("#story .herStoryText").addClass("none");
                     $("#story .hisStoryText").removeClass("none");
+                    $target.closest(".card").find(".card-image img").attr("src", "img/couple/dress_small_inv.jpg")
                 }
                 $target.closest("#ChoiceSelector").find(".imgChooser").toggleClass("imgSelected");
             }
@@ -157,7 +159,14 @@ Wedding.Album_LoadAlbums = function(){
                     }
             }).get();  
         } else {
-            Wedding.photos[$albumIndex].storyList = [];
+
+            Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {
+                    if (this.hasAttribute("data-summary")){
+                        return $(this).attr("data-summary");
+                    }else {
+                        return $(this).find(".data-summary").html();
+                    }
+            }).get();  
         }
         Wedding.photos[$albumIndex].titleList = $allPeoplePhotos.map(function() {
             if (this.hasAttribute("data-title")){
@@ -254,8 +263,13 @@ Wedding.Album_LoadPhoto = function(albumIndex){
 
         if (Wedding.photos[albumIndex].storyList.length > 0){
             var story = Wedding.photos[albumIndex].storyList[photoIndex];
-            var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
-            $captionWrapper.append($caption);
+            if (story !== undefined ){
+                var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
+                $captionWrapper.append($caption);
+                $captionWrapper.removeClass("none");
+            } else {
+                $captionWrapper.addClass("none");
+            }
         } else {
             $captionWrapper.addClass("none");
         }

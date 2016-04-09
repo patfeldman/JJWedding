@@ -779,10 +779,11 @@ img.img {
     /* background-color: #FC7C7C; */
     white-space: nowrap;
     text-align: center;
-    bottom: 0;
-    /* margin-top: -35px; */
+    /* bottom: 0; */
+    margin: 10px;
     border: white 1px solid;
     border-radius: 100px;
+    top: 35px;
 }
 
 .navigatorRight {
@@ -839,30 +840,30 @@ img.img {
 }
 
 .navBarLeft {
-    background-image: url(../img/next-left.png);
+    background-image: url(../img/heart_new.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #4D9674;
+    background-color: #FFFFFF;
     cursor: pointer;
 }
 
 .navBarRight {
-    background-image: url(../img/next-right.png);
+    background-image: url(../img/boat-g.png);
     background-repeat: no-repeat;
-    background-color: #fc7c7c;
-    background-size: 37px;
+    /* background-color: #fc7c7c; */
+    background-size: 77px;
     cursor: pointer;
     background-position: center;
 }
 
 .navBarLeft:hover {
-    background-color: rgba(171, 221, 198, 0.48);
-    background-image: url(../img/next-left-dk.png);
+    background-color: rgb(255, 255, 255);
+    background-image: url(../img/heart_new_sel.png);
 }
 
 .navBarRight:hover {
     background-color: rgba(252, 124, 124, 0.47);
-    background-image: url(../img/next-right-dk.png);
+    background-image: url(../img/boat-o.png);
 }
 
 #party .sectionHeader .h1 {
@@ -1721,7 +1722,7 @@ div#info {
 
 #li {}
 
-#lodgingÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .card-desc ul li {
+#lodgingÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
@@ -1799,7 +1800,7 @@ img.personImage {
     background-color: #D6D6D6;
     margin: auto;
     min-width: 300px;
-    text-shadow: 2px 2px 3px #fff;
+    /* text-shadow: 2px 2px 3px #fff; */
 }
 
 .caption-bottom-wrapper {
@@ -1880,7 +1881,7 @@ span.newSectionTitle {
 #mask.lovestory .caption-bottom-wrapper .caption {
     font-family: Open Sans;
     font-weight: 800;
-    background-color: rgba(240,248,255,.6);
+    background-color: rgba(255, 255, 255, 0.8);
     font-size: 1.1em;
     border-width: 1px;
     margin: 0 2em;
@@ -1933,7 +1934,7 @@ img.personImage {
     padding: 9px;
     margin: auto;
     min-width: 300px;
-    text-shadow: 2px 2px 3px #fff;
+    /* text-shadow: 2px 2px 3px #fff; */
 }
 
 .caption-bottom-wrapper {
@@ -1986,7 +1987,7 @@ span.newSectionTitle {
 .card-image {
 }
 
-#story img {border-radius: 4px;/* border: 1px solid #0C0C0C; */box-shadow: 0px 0px 12px 1px #FF9197;}
+#story img {border-radius: 4px;/* border: 1px solid #0C0C0C; */box-shadow: 0px 0px 0px 2px #FF9197;}
 
 #story .card-image {padding: 0;margin: 0;}
 
@@ -2032,11 +2033,6 @@ ul.no-gutter{
     margin-top: .5em;
 }
 
-@media only screen and (min-width: 600px) {
-    #info .sectionBody.valign-wrapper {
-        /* height: 90%; */
-    }
-}
 @media only screen and (max-width: 990px) {
     .home-img .h1 {
         font-size: 43px;
@@ -2085,8 +2081,11 @@ ul.no-gutter{
 @media only screen and (max-width: 600px) {
     .navigatorRight,
     .navigatorLeft {
-        top: 100%;
-        margin-top: -70px;
+        /* top: 0; */
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        background-size: 53px;
     }
     #info {
         min-height: 1400px;
@@ -2097,7 +2096,7 @@ ul.no-gutter{
         min-height: 1100px;
     }
     #story {
-        min-height: 1200px;
+        min-height: 1157px;
     }
     #party {
         min-height: 1200px;
@@ -2126,6 +2125,9 @@ ul.no-gutter{
     }
     #mask .caption-top-wrapper .caption {
         font-size: 1.0rem;
+    }
+    #story .h1.hifStoryTitle{
+        font-size: 3em;
     }
 }
 
@@ -2386,4 +2388,13 @@ a.him {
     #story .data-story span {
         font-size: 1.144rem;
     }
+}
+
+#story .h1 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#story #HIFStory .card-image img {
+    box-shadow: 0px 0px 0px 5px #060606;
 }
