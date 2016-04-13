@@ -61,12 +61,12 @@ body {
 }
 
 body {
-    margin: 0; 
-    padding: 0; 
-    font-family: Arial, Helvetica, sans-serif; 
-    background-color: #3ba7b8; 
-    font-size: 20px; 
-    line-height: 20px; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3ba7b8;
+    font-size: 20px;
+    line-height: 20px;
     min-height: 600px;
 }
 
@@ -128,13 +128,18 @@ ul#NavigationSmall li {
     font-weight: 600;
     text-shadow: rgb(0, 0, 0) 2px 2px 0;
     line-height: 34px;
+    /* text-decoration: underline; */
 }
 
 ul#Navigation li:hover,
-ul#NavigationSmall li:hover {
-    color: #ABDDC6;
+ul#Navigation li.selected,
+ul#NavigationSmall li:hover, 
+ul#NavigationSmall li.selected {
+    color: rgba(255, 255, 255, 0.49);
     font-weight: 600;
-    text-shadow: #000 0 0 0;
+    /* text-shadow: #F00 0 0 5px; */
+    /* border: red 1px solid; */
+    text-decoration: overline;
 }
 
 ul#NavigationSmall li {
@@ -1173,7 +1178,7 @@ div#food {
 }
 
 a.img {
-    width: 60px; 
+    width: 60px;
     height: 60px;
     /* background: antiquewhite; */
 }
@@ -1338,10 +1343,9 @@ div#lodging {
     background-repeat: no-repeat;
 }
 
-#lodging .descCard,
-#food .descCard {
+#lodging .descCard {
     width: 100%;
-    height: 220px;
+    height: 211px;
     /* margin-top: -20px; */
 }
 
@@ -1437,7 +1441,7 @@ a.location:hover {
 }
 
 #rsvp .sectionBody {
-    width: 75%;
+    /* width: 75%; */
     margin: auto;
     padding-top: 25px;
 }
@@ -1550,6 +1554,7 @@ a.location:hover {
 
 .img.photo {
     max-width: 60px;
+    min-width: 60px;
 }
 #food .luigi {
     background-image: url(../img/luigi.png);
@@ -1722,7 +1727,7 @@ div#info {
 
 #li {}
 
-#lodgingÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .card-desc ul li {
+#lodgingÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â .card-desc ul li {
     padding-left: 10px;
 }
 
@@ -1758,7 +1763,7 @@ div#info {
     text-decoration: underline;
 }
 
-.slide li.bottom {
+.slide .bottom {
     text-shadow: none;
     bottom: 0;
     position: absolute;
@@ -1771,7 +1776,7 @@ div#info {
 }
 
 .bigBottom {
-    padding-bottom: 1em;
+    padding-bottom: .4em;
 }
 
 #food .descCard ul li {
@@ -1944,6 +1949,7 @@ img.personImage {
     position: fixed;
     z-index: 10001;
     bottom: 20px;
+    display: inline-block;
 }
 .caption-top-wrapper {
     width: 100%;
@@ -2076,9 +2082,16 @@ ul.no-gutter{
     #lodging .sectionBody.valign-wrapper {
         height: initial; 
     }
+    .adjustMarginOnMedAndSmall {
+        margin-left: calc(50% - 25px) !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    #party .row .col {
+        /* padding: 0 .55rem; */
+        /* padding-left: 6px !important; */
+    }
     .navigatorRight,
     .navigatorLeft {
         /* top: 0; */
@@ -2160,61 +2173,61 @@ ul.no-gutter{
 }
 
 @media only screen and (max-width: 360px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.1em !important;
     }
 }
 
 @media only screen and (min-width: 360px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.224em !important;
     }
 }
 
 @media only screen and (min-width: 420px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.248em !important;
     }
 }
 
 @media only screen and (min-width: 450px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.272em !important;
     }
 }
 
 @media only screen and (min-width: 480px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.296em !important;
     }
 }
 
 @media only screen and (min-width: 510px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.32em !important;
     }
 }
 
 @media only screen and (min-width: 540px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.344em !important;
     }
 }
 
 @media only screen and (min-width: 570px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.368em !important;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.392em !important;
     }
 }
 
 @media only screen and (min-width: 630px) {
-    .flow-text {
+    .flow-text, .flow-text-has-max {
         font-size:1.416em !important;
     }
 }
@@ -2327,6 +2340,10 @@ a.him {
 
 #story span.data-story {
     margin-top: 25px;
+    color: #404040;
+    font-weight: 500;
+    font-family: open sans;
+    line-height: 2rem;
 }
 
 #story .card-image h3 {}
@@ -2397,4 +2414,28 @@ a.him {
 
 #story #HIFStory .card-image img {
     box-shadow: 0px 0px 0px 5px #060606;
+}
+
+img.logo {
+    width: 100%;
+    max-width: 150px;
+}
+
+.col-no-padding .col{
+    padding:0;
+}
+.col-no-padding{
+    padding:0;
+    margin: 0;
+}
+
+#food .descCard {
+    width: 100%;
+    height: 272px;
+}
+
+.caption-bottom-wrapper.smallBlock div.caption {
+    width: 300px;
+    /* margin: auto; */
+    display: inline-block;
 }

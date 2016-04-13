@@ -5,13 +5,14 @@ Wedding.currentAlbumIndex = 0;
 Wedding.Initialize = function(){
     Wedding.$albumModal = $("#mask");
     Wedding.$tooltip = $("#DynamicTooltip");
-
+    $('select').material_select();
 
     $("ul#Navigation li, ul#NavigationSmall li").on("click", function(e){
     	var $target = $(e.target);
     	if (!$target.is("li")) $target = $target.closest("li");
     	var id = $target.attr("class").split(" ")[0];
-
+		$target.parent().find(".selected").removeClass("selected");
+		$target.addClass("selected");
     	var gotoId = id.replace("-nav", "");
     	Wedding.ScrollNav(gotoId);
     });
@@ -20,6 +21,22 @@ Wedding.Initialize = function(){
     	Wedding.ScrollNav("rsvp");
     });
 	
+    $( "#TeamTypeSelector" ).change(function() {
+        switch($(this).val()){
+            case "rand":
+                $("#TeamTypeNumBuilders").removeClass("none");
+                $("#TeamTypeTeamName").addClass("none");
+                break;
+            case "join":
+                $("#TeamTypeNumBuilders").removeClass("none");
+                $("#TeamTypeTeamName").removeClass("none");
+                break;
+            default:
+                $("#TeamTypeNumBuilders").addClass("none");
+                $("#TeamTypeTeamName").addClass("none");
+                break;
+        }
+    });
 
 	$( ".navBarRight" ).click(function(e) {
 		var $target = $(e.target);
@@ -98,6 +115,31 @@ Wedding.Initialize = function(){
     Wedding.$albumModal.click(function () {$(this).hide();}); 
 
     $("#rsvp").find("form").on( "submit", Wedding.Submit_weddingRsvp);
+
+    $(window).on("scroll", Wedding.ScrollSpy);
+};
+
+Wedding.ScrollSpy = function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop();
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").parent().addClass("active");
+   }                   
+
 };
 
 Wedding.Submit_weddingRsvp = function(e) {
@@ -109,9 +151,10 @@ Wedding.Submit_weddingRsvp = function(e) {
     $numGuests=$("#numguests"),
     $campFri=$("#campFri"),
     $campSat=$("#campSat"),
-    $building = $("#buildingBox"),
+    $teamType = $("#TeamTypeSelector"),
+    $numParticipants = $("#numparticipants"),
     $teamName = $("#team_name"),
-    allFields = $( [] ).add($fName).add($lName).add($email).add($numGuests).add($campFri).add($campSat).add($building).add($teamName);
+    allFields = $( [] ).add($fName).add($lName).add($email).add($numGuests).add($campFri).add($campSat).add($teamName).add($teamType).add(numparticipants);
 
     $.ajax({
         type: "POST",
@@ -159,12 +202,13 @@ Wedding.Album_LoadAlbums = function(){
                     }
             }).get();  
         } else {
-
             Wedding.photos[$albumIndex].storyList = $allPeoplePhotos.map(function() {
                     if (this.hasAttribute("data-summary")){
                         return $(this).attr("data-summary");
-                    }else {
+                    }else if ($(this).find(".data-summary").length > 0) {
                         return $(this).find(".data-summary").html();
+                    } else {
+                        return "";
                     }
             }).get();  
         }
@@ -264,9 +308,15 @@ Wedding.Album_LoadPhoto = function(albumIndex){
         if (Wedding.photos[albumIndex].storyList.length > 0){
             var story = Wedding.photos[albumIndex].storyList[photoIndex];
             if (story !== undefined ){
+                story = $.trim(story);
                 var $caption  = $('<div/>').addClass("caption").addClass("valign").html(story);
-                $captionWrapper.append($caption);
-                $captionWrapper.removeClass("none");
+                if (story.length === 0) 
+                    $captionWrapper.addClass("none");
+                else{
+                    if (story.length < 300) $captionWrapper.addClass("smallBlock");
+                    $captionWrapper.append($caption);
+                    $captionWrapper.removeClass("none");                    
+                } 
             } else {
                 $captionWrapper.addClass("none");
             }
