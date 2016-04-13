@@ -7,6 +7,18 @@ Wedding.Initialize = function(){
     Wedding.$tooltip = $("#DynamicTooltip");
     $('select').material_select();
 
+    Wedding.$scrollElements = $("#Navigation li").map(function(){
+        var classNames = $(this).attr("class");
+        return $.each(classNames.split(/\s+/), function(i, name){
+            var navIndex =name.indexOf("-nav"); 
+            if (navIndex > 0){
+                return $("#" + name.substr(0, navIndex));
+            }
+        });
+    });
+
+
+
     $("ul#Navigation li, ul#NavigationSmall li").on("click", function(e){
     	var $target = $(e.target);
     	if (!$target.is("li")) $target = $target.closest("li");
