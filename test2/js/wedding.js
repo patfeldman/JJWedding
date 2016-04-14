@@ -6,15 +6,20 @@ Wedding.Initialize = function(){
     Wedding.$albumModal = $("#mask");
     Wedding.$tooltip = $("#DynamicTooltip");
     $('select').material_select();
+    $('.modal-trigger').leanModal();
 
     Wedding.$scrollElements = $("#Navigation li").map(function(){
-        var classNames = $(this).attr("class");
-        return $.each(classNames.split(/\s+/), function(i, name){
-            var navIndex =name.indexOf("-nav"); 
+        var classNames = $(this).attr("class").split(/\s+/);
+
+        var $item = null;
+        for (var i = 0; i < classNames.length; i++){
+            var navIndex = classNames[i].indexOf("-nav");
             if (navIndex > 0){
-                return $("#" + name.substr(0, navIndex));
+                $item = $("#" + classNames[i].substr(0, navIndex));
+                break;
             }
-        });
+        }
+        return $item;
     });
 
 
@@ -131,25 +136,28 @@ Wedding.Initialize = function(){
     $(window).on("scroll", Wedding.ScrollSpy);
 };
 
+Wedding.LastId = "home";
 Wedding.ScrollSpy = function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop();
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+40;
+
+    // Get id of current scroll item
+    var cur = Wedding.$scrollElements.map(function(){
      if ($(this).offset().top < fromTop)
        return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
+    });
+    // Get the id of the current element
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
    
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter("[href='#"+id+"']").parent().addClass("active");
+    if (Wedding.LastId !== id) {
+        Wedding.LastId = id;
+        $selectedNavs = $("." + id + "-nav");
+        $selectedNavs.each(function(){
+            $(this).parent().find(".selected").removeClass("selected");
+            $(this).addClass("selected");
+        });
+
    }                   
 
 };
