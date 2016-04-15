@@ -1414,7 +1414,13 @@ a.location:hover {
 }
 
 .groomsmen .imgWrapper a.seven {
-    background-image: url(../img/groomsmen1.png);
+    background-image: url(../img/groomsmen7.png);
+}
+.groomsmen .imgWrapper a.eight {
+    background-image: url(../img/groomsmen8.png);
+}
+.groomsmen .imgWrapper a.nine {
+    background-image: url(../img/groomsmen9.png);
 }
 
 .bridesmaids .imgWrapper a.one {
@@ -1443,6 +1449,21 @@ a.location:hover {
 
 .bridesmaids .imgWrapper a.seven {
     background-image: url(../img/bridesmaid7.png);
+}
+
+.bridesmaids .imgWrapper a.eight {
+    background-image: url(../img/bridesmaid8.png);
+}
+
+.bridesmaids .imgWrapper a.nine {
+    background-image: url(../img/bridesmaid9.png);
+}
+
+.bridesmaids .imgWrapper a.ten {
+    background-image: url(../img/bridesmaid10.png);
+}
+.bridesmaids .imgWrapper a.eleven {
+    background-image: url(../img/bridesmaid11.png);
 }
 
 #food .sectionBody.valign-wrapper {
